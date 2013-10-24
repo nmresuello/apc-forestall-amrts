@@ -12,42 +12,42 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id:'); ?>
+		<?php echo $form->label($model,'id'); ?>
 		<?php echo $form->textField($model,'id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Date Issued:'); ?>
+		<?php echo $form->label($model,'policy_dateissued'); ?>
 		<?php echo $form->textField($model,'policy_dateissued'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Insurance Type:'); ?>
+		<?php echo $form->label($model,'insurance_type'); ?>
 		<?php echo $form->textField($model,'insurance_type',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Attachement Details:'); ?>
+		<?php echo $form->label($model,'insurance_attachment_details'); ?>
 		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Expiration Date:'); ?>
+		<?php echo $form->label($model,'policy_date_expiration'); ?>
 		<?php echo $form->textField($model,'policy_date_expiration'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Policy Coverage:'); ?>
+		<?php echo $form->label($model,'policy_coverage'); ?>
 		<?php echo $form->textField($model,'policy_coverage',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Insured Items:'); ?>
+		<?php echo $form->label($model,'insureditems'); ?>
 		<?php echo $form->textField($model,'insureditems',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Term Price:'); ?>
+		<?php echo $form->label($model,'termprice'); ?>
 		<?php echo $form->textField($model,'termprice',array('size'=>6,'maxlength'=>6)); ?>
 	</div>
 

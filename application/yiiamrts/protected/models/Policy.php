@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "policy".
+ * This is the model class for table "Policy".
  *
- * The followings are the available columns in table 'policy':
+ * The followings are the available columns in table 'Policy':
  * @property integer $id
  * @property string $policy_dateissued
  * @property string $insurance_type
@@ -17,18 +17,28 @@
  * @property integer $applicant_id
  *
  * The followings are the available model relations:
- * @property Applicant $applicant
- * @property InsuranceCompany $insuranceCompany
  * @property Payment $payment
+ * @property InsuranceCompany $insuranceCompany
+ * @property Assured $applicant
  */
 class Policy extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return Policy the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'policy';
+		return 'Policy';
 	}
 
 	/**
@@ -39,13 +49,13 @@ class Policy extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, payment_id, insurance_company_id, applicant_id', 'required'),
-			array('id, payment_id, insurance_company_id, applicant_id', 'numerical', 'integerOnly'=>true),
+			array('payment_id, insurance_company_id, applicant_id', 'required'),
+			array('payment_id, insurance_company_id, applicant_id', 'numerical', 'integerOnly'=>true),
 			array('insurance_type, insurance_attachment_details, policy_coverage, insureditems', 'length', 'max'=>45),
 			array('termprice', 'length', 'max'=>6),
 			array('policy_dateissued, policy_date_expiration', 'safe'),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
+			// Please remove those attributes that should not be searched.
 			array('id, policy_dateissued, insurance_type, insurance_attachment_details, policy_date_expiration, policy_coverage, insureditems, termprice, payment_id, insurance_company_id, applicant_id', 'safe', 'on'=>'search'),
 		);
 	}
@@ -58,9 +68,9 @@ class Policy extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'applicant' => array(self::BELONGS_TO, 'Applicant', 'applicant_id'),
-			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
 			'payment' => array(self::BELONGS_TO, 'Payment', 'payment_id'),
+			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
+			'applicant' => array(self::BELONGS_TO, 'Assured', 'applicant_id'),
 		);
 	}
 
@@ -86,19 +96,12 @@ class Policy extends CActiveRecord
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -117,16 +120,5 @@ class Policy extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Policy the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }
