@@ -11,7 +11,7 @@
  * @property string $created_at
  *
  * The followings are the available model relations:
- * @property Myaddress $id0
+ * @property Myaddress $myaddress
  */
 class Mycomment extends CActiveRecord
 {
@@ -58,7 +58,7 @@ class Mycomment extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'id0' => array(self::BELONGS_TO, 'Myaddress', 'id'),
+			'myaddress' => array(self::BELONGS_TO, 'Myaddress', 'myaddress_id'),
 		);
 	}
 
