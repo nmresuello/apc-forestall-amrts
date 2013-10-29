@@ -53,7 +53,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=csproj2_resuello_nikkie_marie_ourspace',
+			'connectionString' => 'mysql:host=localhost;dbname=csproj2_cambay_marion_chloe_ourspace',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
