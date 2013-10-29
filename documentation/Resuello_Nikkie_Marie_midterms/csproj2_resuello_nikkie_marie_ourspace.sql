@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2013 at 07:51 AM
+-- Generation Time: Oct 29, 2013 at 08:00 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -55,13 +55,13 @@ INSERT INTO `myaddress` (`id`, `firstname`, `middlename`, `lastname`, `gender`, 
 --
 
 CREATE TABLE IF NOT EXISTS `mycomment` (
-  `id` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `myaddress` int(11) NOT NULL,
   `author` varchar(255) NOT NULL,
   `body` longtext NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `mycomment`

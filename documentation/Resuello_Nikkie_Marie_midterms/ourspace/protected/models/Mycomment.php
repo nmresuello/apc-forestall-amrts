@@ -42,7 +42,7 @@ class Mycomment extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('myaddress, author, body, created_at', 'required'),
-			array('id, myaddress', 'numerical', 'integerOnly'=>true),
+			array('myaddress', 'numerical', 'integerOnly'=>true),
 			array('author', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
