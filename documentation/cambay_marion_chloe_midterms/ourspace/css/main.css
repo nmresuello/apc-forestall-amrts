@@ -2,24 +2,24 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	color: black;
+	font: normal 10pt Century, Times New Roman, Candara;
+	background: creme;
 }
 
 #page
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
-	border: 1px solid #C9E0ED;
+	background: pink;
+	border: 5px solid #C9E0ED;
 }
 
 #header
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 2px solid #C9E0ED;
 }
 
 #content
@@ -38,7 +38,7 @@ body
 	margin: 10px 20px;
 	font-size: 0.8em;
 	text-align: center;
-	border-top: 1px solid #C9E0ED;
+	border-top: 3px solid #C9E0ED;
 }
 
 #logo
@@ -65,9 +65,9 @@ body
 
 #mainmenu ul li a
 {
-	color:#ffffff;
+	color: Aqua;
 	background-color:transparent;
-	font-size:12px;
+	font-size:16px;
 	font-weight:bold;
 	text-decoration:none;
 	padding:5px 8px;
@@ -75,7 +75,7 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
+	color: navy;
 	background-color:#EFF4FA;
 	text-decoration:none;
 }
@@ -167,7 +167,7 @@ div.search-form
 
 .portlet-title
 {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
