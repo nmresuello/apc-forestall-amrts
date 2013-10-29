@@ -15,11 +15,14 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'myaddress'); ?>
-		<?php echo $form->textField($model,'myaddress'); ?>
-		<?php echo $form->error($model,'myaddress'); ?>
-	</div>
+	<div>
+<?php echo $form->labelEx($model,'myaddress'); ?>
+<?php echo $form->dropDownList($model, 'myaddress', CHtml::listData(
+myaddress::model()->findAll(), 'id', 'name'),
+array('prompt' => 'lastname')
+); ?>
+<?php echo $form->error($model,'myaddress'); ?>
+</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>
