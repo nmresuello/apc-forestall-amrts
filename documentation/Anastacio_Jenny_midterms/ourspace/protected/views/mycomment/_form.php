@@ -16,8 +16,11 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'myaddress_id'); ?>
-		<?php echo $form->textField($model,'myaddress_id'); ?>
+		<?php echo $form->dropDownList($model, 'myaddress_id', CHtml::listData(
+	 	Myaddress::model()->findAll(), 'id', 'lastname'),
+	 	array('prompt' => 'Please Select an Address')
+		
+		); ?>
 		<?php echo $form->error($model,'myaddress_id'); ?>
 	</div>
 
