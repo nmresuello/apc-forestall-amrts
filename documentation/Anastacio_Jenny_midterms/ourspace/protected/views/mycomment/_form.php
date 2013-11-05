@@ -25,19 +25,19 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'author'); ?>
+		<?php echo $form->labelEx($model,'Author:'); ?>
 		<?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'author'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
+		<?php echo $form->labelEx($model,'Body:'); ?>
 		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'body'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'created_at'); ?>
+		<?php echo $form->labelEx($model,'Created At:'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
 		<?php echo $form->error($model,'created_at'); ?>
 	</div>
