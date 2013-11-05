@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2013 at 07:22 AM
+-- Generation Time: Nov 05, 2013 at 06:25 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `csproj2_anastacio_jenny_ourspace`
 --
-CREATE DATABASE IF NOT EXISTS `csproj2_anastacio_jenny_ourspace` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `csproj2_anastacio_jenny_ourspace`;
 
 -- --------------------------------------------------------
 
@@ -35,34 +33,11 @@ CREATE TABLE IF NOT EXISTS `myaddress` (
   `lastname` varchar(30) NOT NULL,
   `gender` varchar(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `home_address` varchar(50) NOT NULL,
+  `landline` varchar(20) NOT NULL,
+  `cellphone` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mycomment`
---
-
-CREATE TABLE IF NOT EXISTS `mycomment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `myaddress_id` int(11) NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `body` longtext NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `mycomment_ibfk_1` (`myaddress_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `mycomment`
---
-ALTER TABLE `mycomment`
-  ADD CONSTRAINT `mycomment_ibfk_1` FOREIGN KEY (`myaddress_id`) REFERENCES `myaddress` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
