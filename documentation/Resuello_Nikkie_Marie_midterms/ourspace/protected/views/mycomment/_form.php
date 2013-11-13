@@ -18,7 +18,7 @@
 	<div>
 <?php echo $form->labelEx($model,'myaddress'); ?>
 <?php echo $form->dropDownList($model, 'myaddress', CHtml::listData(
-myaddress::model()->findAll(), 'id', 'name'),
+myaddress::model()->findAll(), 'id', 'lastname'),
 array('prompt' => 'lastname')
 ); ?>
 <?php echo $form->error($model,'myaddress'); ?>
