@@ -9,19 +9,19 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('firstname')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('First Name')); ?>:</b>
 	<?php echo CHtml::encode($data->firstname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('middlename')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Middle Name')); ?>:</b>
 	<?php echo CHtml::encode($data->middlename); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('lastname')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Last Name')); ?>:</b>
 	<?php echo CHtml::encode($data->lastname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('gender')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Female/Male')); ?>:</b>
 	<?php echo CHtml::encode($data->gender); ?>
 	<br />
 
