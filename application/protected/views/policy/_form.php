@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_type'); ?>
-		<?php echo $form->textField($model,'insurance_type',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'insurance_type'); ?>
 		<?php echo $form->error($model,'insurance_type'); ?>
 	</div>
 

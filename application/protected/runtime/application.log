@@ -1050,6 +1050,7 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/Applicant
 HTTP_REFERER=http://localhost/yiiamrts/
 ---
+<<<<<<< HEAD
 2013/11/20 07:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework1\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\yii\framework1\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
@@ -1094,3 +1095,510 @@ REQUEST_URI=/yiiamrts/index.php/site/page?view=about
 in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\site\pages\about.php (32)
 in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\site\pages\about.php (32)
 in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+=======
+2013/11/19 14:36:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:50:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'forestall amrts'' in C:\xampp\htdocs\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(InsuranceCompany))
+#7 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(74): CActiveRecord::model('InsuranceCompan...')
+#8 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\InsuranceCompanyController.php(125): CActiveDataProvider->__construct('InsuranceCompan...')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): InsuranceCompanyController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Insurancecompan...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Insurancecompany
+HTTP_REFERER=http://localhost/apc-forestall-amrts/
+---
+2013/11/19 14:52:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Insurancecompany
+---
+2013/11/19 14:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:52:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Applicant
+---
+2013/11/19 14:52:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php/Insurancecompany
+---
+2013/11/19 14:54:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/site/gii
+---
+2013/11/19 14:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/site/gii
+---
+2013/11/19 15:10:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Applicant".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Applicant')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/apc-forestall-amrts/index.php/Applicant
+HTTP_REFERER=http://localhost/apc-forestall-amrts/index.php
+---
+2013/11/19 15:22:34 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:22:55 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:23:12 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:23:14 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:23:14 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:23:14 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:23:14 [error] [php] include(Departments.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:17 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:29 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:30 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:30 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:31 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+2013/11/19 15:26:31 [error] [php] include(Insurance_type.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#4 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php(18): PolicyController->renderPartial()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): PolicyController->renderInternal()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): PolicyController->renderFile()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(782): PolicyController->renderPartial()
+#9 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): PolicyController->render()
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): PolicyController->runAction()
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): PolicyController->filterAccessControl()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): PolicyController->runActionWithFilters()
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): PolicyController->run()
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\index.php(13): CWebApplication->run()
+REQUEST_URI=/apc-forestall-amrts/index.php/policy/create
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\_form.php (27)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\views\policy\create.php (18)
+in C:\Users\Allan\Desktop\JamProjects\apc-forestall-amrts\application\protected\controllers\PolicyController.php (79)
+>>>>>>> 0233e9a1ef64a0ffaa36db2eaf1c3625b6f2c108
