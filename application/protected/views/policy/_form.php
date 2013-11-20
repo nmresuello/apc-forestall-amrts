@@ -23,7 +23,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_type'); ?>
-		<?php echo $form->textField($model,'insurance_type'); ?>
+		<?php echo $form->dropDownList($model, 'insurance_type', CHtml::listData(
+					policy::model()->findAll(), 'id', 'name'),
+					array('prompt' => 'Select an insurance type')
+); ?>
 		<?php echo $form->error($model,'insurance_type'); ?>
 	</div>
 
