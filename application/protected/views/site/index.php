@@ -4,29 +4,7 @@
 $this->pageTitle=Yii::app()->name;
 Yii::app()->clientScript->registerCoreScript('jquery');
 ?>
-<?php $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
-  array(
-    'imageBlockSelector' => '#myslider', //the jquery selector
-    'widthSlider' => '900', //or you can use jquery '$(window).width()/1.6',
-    'heightSlider' => '275', //or you can use jquery '$(window).height()/1.6',
-    'slideUnitSize' => 'px', //px or %
-    'timeBetweenChangeSlider' => 4000, //the time between displayed sliders in miliseconds
-    'timeDelayAnimation' => 1000, //the time before slider starts in miliseconds
-    'sliderStartFrom' => 0, //if sliderSuffle is set to true then sliderStartFrom is not nesessary
-    'sliderSuffle' => true, //suffle the pictures for random display
-   )); 
-  ?>
- 
 
-  <div id="myslider">
-  <?php
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/Chrysanthemum.jpg', 'alt 1');
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/Desert.jpg', 'alt 2');
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/Koala.jpg', 'alt 3');
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/Lighthouse.jpg', 'alt 4');
-  echo CHtml::image(Yii::app()->request->baseUrl . '/images/Penguins.jpg', 'alt 5');
-  ?>
-  </div>
 <h1>Welcome to <?php echo CHtml::encode(Yii::app()->name); ?></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>
