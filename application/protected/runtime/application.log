@@ -2178,3 +2178,47 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/chloe/
 ---
+2013/11/22 07:30:29 [error] [exception.CException] exception 'CException' with message 'Alias "ext.FlexPictureSlider.FlexPictureSlider" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.FlexPicture...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.FlexPicture...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.FlexPicture...', Array)
+#3 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\site\index.php(17): CBaseController->widget('ext.FlexPicture...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', NULL, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', NULL, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\SiteController.php(32): CController->render('index')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiamrts/
+---
+2013/11/22 07:31:01 [error] [exception.CException] exception 'CException' with message 'Alias "ext.FlexPictureSlider.FlexPictureSlider" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.FlexPicture...', true)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.FlexPicture...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.FlexPicture...', Array)
+#3 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\site\index.php(17): CBaseController->widget('ext.FlexPicture...', Array)
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', NULL, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', NULL, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\SiteController.php(32): CController->render('index')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiamrts/
+---

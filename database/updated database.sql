@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2013 at 09:26 AM
+-- Generation Time: Nov 22, 2013 at 07:42 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -57,6 +57,24 @@ CREATE TABLE IF NOT EXISTS `broker` (
   `broker_address` varchar(45) DEFAULT NULL,
   `broker_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `claim`
+--
+
+CREATE TABLE IF NOT EXISTS `claim` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `policy_id` int(11) NOT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `middlename` varchar(45) DEFAULT NULL,
+  `birthday` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_claim_policy1_idx` (`policy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -156,6 +174,12 @@ CREATE TABLE IF NOT EXISTS `policy` (
 --
 
 --
+-- Constraints for table `claim`
+--
+ALTER TABLE `claim`
+  ADD CONSTRAINT `fk_claim_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Constraints for table `commission`
 --
 ALTER TABLE `commission`
@@ -183,9 +207,9 @@ ALTER TABLE `payment`
 -- Constraints for table `policy`
 --
 ALTER TABLE `policy`
-  ADD CONSTRAINT `fk_policy_payment1` FOREIGN KEY (`payment_id`) REFERENCES `payment` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_policy_applicant1` FOREIGN KEY (`applicant_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_policy_applicant1` FOREIGN KEY (`applicant_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_policy_payment1` FOREIGN KEY (`payment_id`) REFERENCES `payment` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
