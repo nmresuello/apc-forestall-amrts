@@ -62,19 +62,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'payment_id'); ?>
-		<?php echo $form->textField($model,'payment_id'); ?>
+		<?php echo $form->dropDownList($model, 'payment_id', CHtml::listData(
+            policy::model()->findAll(), 'id', 'name'),
+            array('prompt' => 'Select a payment ID')); ?>
 		<?php echo $form->error($model,'payment_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_company_id'); ?>
-		<?php echo $form->textField($model,'insurance_company_id'); ?>
+		<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
+            policy::model()->findAll(), 'id', 'name'),
+            array('prompt' => 'Select an insurance company ID')); ?>
 		<?php echo $form->error($model,'insurance_company_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'applicant_id'); ?>
-		<?php echo $form->textField($model,'applicant_id'); ?>
+		<?php echo $form->dropDownList($model, 'applicant_id', CHtml::listData(
+            policy::model()->findAll(), 'id', 'name'),
+            array('prompt' => 'Select an applicant ID'));?>
 		<?php echo $form->error($model,'applicant_id'); ?>
 	</div>
 
