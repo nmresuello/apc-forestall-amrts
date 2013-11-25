@@ -38,9 +38,10 @@
       array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Policy','url'=>array('/Policy'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Assured', 'url'=>array('/Assured'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Insurance Company', 'url'=>array('/Insurancecompany'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Insurance Company', 'url'=>array('/Insurancecompanydetails'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Inquiry', 'url'=>array('/site/contact')),
+				array('label'=>'Claim', 'url'=>array('/Claim')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
         );
