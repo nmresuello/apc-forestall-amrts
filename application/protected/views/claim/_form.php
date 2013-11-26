@@ -22,33 +22,27 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'lastname'); ?>
-		<?php echo $form->textField($model,'lastname',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'lastname'); ?>
+		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'firstname'); ?>
-		<?php echo $form->textField($model,'firstname',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'firstname'); ?>
+		<?php echo $form->labelEx($model,'type_of_accident'); ?>
+		<?php echo $form->textField($model,'type_of_accident',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'type_of_accident'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'middlename'); ?>
-		<?php echo $form->textField($model,'middlename',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'middlename'); ?>
+		<?php echo $form->labelEx($model,'insured_items'); ?>
+		<?php echo $form->textField($model,'insured_items',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'insured_items'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'birthday'); ?>
-		<?php echo $form->textField($model,'birthday',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'birthday'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'address'); ?>
+		<?php echo $form->labelEx($model,'date'); ?>
+		<?php echo $form->textField($model,'date'); ?>
+		<?php echo $form->error($model,'date'); ?>
 	</div>
 
 	<div class="row buttons">
