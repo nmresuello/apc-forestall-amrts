@@ -18,6 +18,16 @@
 class Payment extends CActiveRecord
 {
 	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return Payment the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
+	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -39,7 +49,7 @@ class Payment extends CActiveRecord
 			array('paymentamount', 'length', 'max'=>6),
 			array('date', 'safe'),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
+			// Please remove those attributes that should not be searched.
 			array('id, paymenttype, date, receipt, paymentamount, commission_id', 'safe', 'on'=>'search'),
 		);
 	}
@@ -74,19 +84,12 @@ class Payment extends CActiveRecord
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
@@ -100,16 +103,5 @@ class Payment extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Payment the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }
