@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2013 at 07:01 AM
+-- Generation Time: Nov 26, 2013 at 06:04 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -68,11 +68,10 @@ CREATE TABLE IF NOT EXISTS `broker` (
 CREATE TABLE IF NOT EXISTS `claim` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `policy_id` int(11) NOT NULL,
-  `lastname` varchar(45) DEFAULT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
-  `middlename` varchar(45) DEFAULT NULL,
-  `birthday` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
+  `description` text,
+  `type_of_accident` varchar(45) DEFAULT NULL,
+  `insured_items` varchar(45) DEFAULT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_claim_policy1_idx` (`policy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
