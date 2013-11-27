@@ -21,9 +21,27 @@
 		<?php echo $form->error($model,'paymenttype'); ?>
 	</div>
 
-	<div class="row">
+		<div class="row">
 		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+                    'model'=>$model,
+                    'attribute'=>'date',
+                    'name'=>'date',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd', 
+                                'changeMonth'=> true,
+                                'changeYear'=>true,
+                        'showAnim'=>'fold', 
+                        'showOn'=>'button', 
+                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'yearRange'=>'1960:2020',
+                    ),
+                    'htmlOptions'=>array(
+                        'style'=>'width:80px;vertical-align:top'
+                    ),
+                        ));
+                ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
