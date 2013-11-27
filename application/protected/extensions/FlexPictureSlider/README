@@ -1,11 +1,21 @@
-<?php
-/* @var $this SiteController */
+Version 1.1
 
-$this->pageTitle=Yii::app()->name;
-Yii::app()->clientScript->registerCoreScript('jquery');
-?>
+	To use the FlexPictureSlider:
+	1) Extract archive in your extensions folder
+	2) In the site root create a folder named "images" and copy content of image folder from archive
 
-<?php $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
+	To include a slider in a page:
+	
+Yii::app()->clientScript->registerCoreScript('jquery'); //if you do not set yet
+ 
+  //you have to put this code in your view file
+  $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
+  array('imageBlockSelector' => '#myslider', //the jquery selector
+  );
+ 
+ 
+  //or with full custom parameters
+  $this->widget('ext.FlexPictureSlider.FlexPictureSlider',
   array(
     'imageBlockSelector' => '#myslider', //the jquery selector
     'widthSlider' => '900', //or you can use jquery '$(window).width()/1.6',
@@ -28,3 +38,4 @@ Yii::app()->clientScript->registerCoreScript('jquery');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/05.png', 'alt 5');
   ?>
   </div>
+	
