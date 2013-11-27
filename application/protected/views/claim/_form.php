@@ -17,7 +17,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
-		<?php echo $form->textField($model,'policy_id'); ?>
+		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
+            payment::model()->findAll(), 'id', 'name'),
+            array('prompt' => 'Select a policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
 
