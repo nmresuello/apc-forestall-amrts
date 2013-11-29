@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List InsuranceCompanyDetails', 'url'=>array('index')),
-	array('label'=>'Create InsuranceCompanyDetails', 'url'=>array('create')),
-	array('label'=>'Update InsuranceCompanyDetails', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete InsuranceCompanyDetails', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage InsuranceCompanyDetails', 'url'=>array('admin')),
+	array('label'=>'List Insurance Company Details', 'url'=>array('index')),
+	array('label'=>'Create Insurance Company Details', 'url'=>array('create')),
+	array('label'=>'Update Insurance Company Details', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete Insurance Company Details', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Insurance Company Details', 'url'=>array('admin')),
 );
 ?>
 
