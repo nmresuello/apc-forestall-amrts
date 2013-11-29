@@ -25,6 +25,7 @@ $this->menu=array(
 		'client_lastname',
 		'client_firstname',
 		'client_middlename',
+		'gender',
 		'address',
 		'age',
 		'email_add',

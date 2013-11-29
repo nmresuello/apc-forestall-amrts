@@ -36,7 +36,7 @@
 	<div>
 <?php echo $form->labelEx($model,'broker_id'); ?>
 <?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
-Broker::model()->findAll(), 'id', 'name'),
+Broker::model()->findAll(), 'id', 'broker_name'),
 array('prompt' => 'Select Broker')
 ); ?>
 <?php echo $form->error($model,'broker_id'); ?>

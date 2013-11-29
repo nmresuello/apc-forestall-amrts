@@ -34,6 +34,14 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'gender'); ?>
+		<?php echo CHtml::dropDownList('listname', $model,
+		array('M' => 'Male', 'F' => 'Female'),
+		array('empty' => 'Select Gender'));?>
+		<?php echo $form->error($model,'gender'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'address'); ?>
 		<?php echo $form->textField($model,'address',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'address'); ?>
