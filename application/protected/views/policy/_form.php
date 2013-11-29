@@ -17,16 +17,31 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_dateissued'); ?>
-		<?php echo $form->textField($model,'policy_dateissued'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+                    'model'=>$model,
+                    'attribute'=>'policy_dateissued',
+                    'name'=>'policy_dateissued',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd', 
+                                'changeMonth'=> true,
+                                'changeYear'=>true,
+                        'showAnim'=>'fold', 
+                        'showOn'=>'button', 
+                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'yearRange'=>'1960:2020',
+                    ),
+                    'htmlOptions'=>array(
+                        'style'=>'width:80px;vertical-align:top'
+                    ),
+                        ));
+                ?>
 		<?php echo $form->error($model,'policy_dateissued'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_type'); ?>
-		<?php echo $form->dropDownList($model, 'insurance_type', CHtml::listData(
-					policy::model()->findAll(), 'id', 'name'),
-					array('prompt' => 'Select an insurance type')
-); ?>
+		<?php echo $form->textField($model,'insurance_type'); ?>
 		<?php echo $form->error($model,'insurance_type'); ?>
 	</div>
 
@@ -38,7 +53,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_date_expiration'); ?>
-		<?php echo $form->textField($model,'policy_date_expiration'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+                    'model'=>$model,
+                    'attribute'=>'policy_date_expiration',
+                    'name'=>'policy_date_expiration',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd', 
+                                'changeMonth'=> true,
+                                'changeYear'=>true,
+                        'showAnim'=>'fold', 
+                        'showOn'=>'button', 
+                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'yearRange'=>'1960:2020',
+                    ),
+                    'htmlOptions'=>array(
+                        'style'=>'width:80px;vertical-align:top'
+                    ),
+                        ));
+                ?>
 		<?php echo $form->error($model,'policy_date_expiration'); ?>
 	</div>
 

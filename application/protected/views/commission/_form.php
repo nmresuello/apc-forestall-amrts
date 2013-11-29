@@ -8,10 +8,6 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'commission-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -31,17 +27,38 @@
 		<?php echo $form->error($model,'receipt'); ?>
 	</div>
 
-	<div class="row">
+		<div class="row">
 		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+                    'model'=>$model,
+                    'attribute'=>'date',
+                    'name'=>'date',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd', 
+                                'changeMonth'=> true,
+                                'changeYear'=>true,
+                        'showAnim'=>'fold', 
+                        'showOn'=>'button', 
+                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'yearRange'=>'1960:2020',
+                    ),
+                    'htmlOptions'=>array(
+                        'style'=>'width:80px;vertical-align:top'
+                    ),
+                        ));
+                ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'broker_id'); ?>
-		<?php echo $form->textField($model,'broker_id'); ?>
-		<?php echo $form->error($model,'broker_id'); ?>
-	</div>
+	<div>
+<?php echo $form->labelEx($model,'broker_id'); ?>
+<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
+Broker::model()->findAll(), 'id', 'broker_name'),
+array('prompt' => 'Select Broker')
+); ?>
+<?php echo $form->error($model,'broker_id'); ?>
+</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

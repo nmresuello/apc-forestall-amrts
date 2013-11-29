@@ -8,6 +8,7 @@
  * @property string $client_lastname
  * @property string $client_firstname
  * @property string $client_middlename
+ * @property string $gender
  * @property string $address
  * @property integer $age
  * @property string $email_add
@@ -44,11 +45,12 @@ class Assured extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('client_lastname, client_firstname, client_middlename', 'required'),
 			array('age', 'numerical', 'integerOnly'=>true),
-			array('client_lastname, client_firstname, client_middlename, address, email_add, contact_number', 'length', 'max'=>45),
+			array('client_lastname, client_firstname, client_middlename, gender, address, email_add, contact_number', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, client_lastname, client_firstname, client_middlename, address, age, email_add, contact_number', 'safe', 'on'=>'search'),
+			array('id, client_lastname, client_firstname, client_middlename, gender, address, age, email_add, contact_number', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,6 +76,7 @@ class Assured extends CActiveRecord
 			'client_lastname' => 'Client Lastname',
 			'client_firstname' => 'Client Firstname',
 			'client_middlename' => 'Client Middlename',
+			'gender' => 'Gender',
 			'address' => 'Address',
 			'age' => 'Age',
 			'email_add' => 'Email Add',
@@ -96,6 +99,7 @@ class Assured extends CActiveRecord
 		$criteria->compare('client_lastname',$this->client_lastname,true);
 		$criteria->compare('client_firstname',$this->client_firstname,true);
 		$criteria->compare('client_middlename',$this->client_middlename,true);
+		$criteria->compare('gender',$this->gender,true);
 		$criteria->compare('address',$this->address,true);
 		$criteria->compare('age',$this->age);
 		$criteria->compare('email_add',$this->email_add,true);

@@ -9,7 +9,7 @@
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Forestall Insurance Agency Company',
+	'name'=>'Forestall Insurance',
 	
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -56,7 +56,7 @@ return array(
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=forestall amrts',
+			'connectionString' => 'mysql:host=localhost;dbname=forestall-amrts',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

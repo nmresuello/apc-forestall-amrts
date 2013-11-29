@@ -8,10 +8,6 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'payment-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -25,9 +21,27 @@
 		<?php echo $form->error($model,'paymenttype'); ?>
 	</div>
 
-	<div class="row">
+		<div class="row">
 		<?php echo $form->labelEx($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+                    'model'=>$model,
+                    'attribute'=>'date',
+                    'name'=>'date',
+                    'options'=>array(
+                        'dateFormat'=>'yy-mm-dd', 
+                                'changeMonth'=> true,
+                                'changeYear'=>true,
+                        'showAnim'=>'fold', 
+                        'showOn'=>'button', 
+                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
+                        'buttonImageOnly'=>true,
+                        'yearRange'=>'1960:2020',
+                    ),
+                    'htmlOptions'=>array(
+                        'style'=>'width:80px;vertical-align:top'
+                    ),
+                        ));
+                ?>
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
@@ -45,7 +59,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'commission_id'); ?>
-		<?php echo $form->textField($model,'commission_id'); ?>
+		<?php echo $form->dropDownList($model, 'commission_id', CHtml::listData(
+            payment::model()->findAll(), 'id', 'amount'),
+            array('prompt' => 'Select an commission ID'));?>
 		<?php echo $form->error($model,'commission_id'); ?>
 	</div>
 

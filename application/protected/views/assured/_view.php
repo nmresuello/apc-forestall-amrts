@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->client_middlename); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('gender')); ?>:</b>
+	<?php echo CHtml::encode($data->gender); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
 	<?php echo CHtml::encode($data->address); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->age); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email_add')); ?>:</b>
 	<?php echo CHtml::encode($data->email_add); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('contact_number')); ?>:</b>
 	<?php echo CHtml::encode($data->contact_number); ?>
 	<br />

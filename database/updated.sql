@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2013 at 07:01 AM
+-- Generation Time: Nov 29, 2013 at 06:59 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `forestall amrts`
+-- Database: `forestall-amrts`
 --
-CREATE DATABASE IF NOT EXISTS `forestall amrts` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `forestall amrts`;
+CREATE DATABASE IF NOT EXISTS `forestall-amrts` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `forestall-amrts`;
 
 -- --------------------------------------------------------
 
@@ -30,15 +30,26 @@ USE `forestall amrts`;
 
 CREATE TABLE IF NOT EXISTS `assured` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `client_lastname` varchar(45) DEFAULT NULL,
-  `client_firstname` varchar(45) DEFAULT NULL,
-  `client_middlename` varchar(45) DEFAULT NULL,
+  `client_lastname` varchar(45) NOT NULL,
+  `client_firstname` varchar(45) NOT NULL,
+  `client_middlename` varchar(45) NOT NULL,
+  `gender` varchar(45) DEFAULT NULL,
   `address` varchar(45) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `email_add` varchar(45) DEFAULT NULL,
   `contact_number` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `assured`
+--
+
+INSERT INTO `assured` (`id`, `client_lastname`, `client_firstname`, `client_middlename`, `gender`, `address`, `age`, `email_add`, `contact_number`) VALUES
+(1, 'Jelbert', 'Nixon', 'Baco', NULL, '', NULL, '', ''),
+(2, 'Jelbert', 'Nixon', 'Baco', NULL, '', NULL, '', ''),
+(3, 'Jelbert', 'Nixon', 'Baco', NULL, '', NULL, '', ''),
+(4, 'ajh', 'kjasdk', 'kj', NULL, '', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -57,7 +68,14 @@ CREATE TABLE IF NOT EXISTS `broker` (
   `broker_address` varchar(45) DEFAULT NULL,
   `broker_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `broker`
+--
+
+INSERT INTO `broker` (`id`, `owner_firstname`, `owner_lastname`, `owner_middlename`, `employee_firstname`, `employee_middlename`, `employee_lastname`, `broker_address`, `broker_name`) VALUES
+(1, 'chloe', 'cambay', 'yambao', 'jenny', 'anastacio', 'aaa', 'adas', 'apc');
 
 -- --------------------------------------------------------
 
@@ -68,11 +86,10 @@ CREATE TABLE IF NOT EXISTS `broker` (
 CREATE TABLE IF NOT EXISTS `claim` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `policy_id` int(11) NOT NULL,
-  `lastname` varchar(45) DEFAULT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
-  `middlename` varchar(45) DEFAULT NULL,
-  `birthday` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
+  `description` text,
+  `type_of_accident` varchar(45) DEFAULT NULL,
+  `insured_items` varchar(45) DEFAULT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_claim_policy1_idx` (`policy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -91,7 +108,14 @@ CREATE TABLE IF NOT EXISTS `commission` (
   `broker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_commission_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `commission`
+--
+
+INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
+(1, '10000', '13200', '0000-00-00', 1);
 
 -- --------------------------------------------------------
 

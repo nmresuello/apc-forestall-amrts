@@ -23,10 +23,9 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'policy_id',
-		'lastname',
-		'firstname',
-		'middlename',
-		'birthday',
-		'address',
+		'description',
+		'type_of_accident',
+		'insured_items',
+		'date',
 	),
 )); ?>
