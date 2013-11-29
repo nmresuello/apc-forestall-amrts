@@ -33,11 +33,14 @@
 		<?php echo $form->error($model,'date'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'broker_id'); ?>
-		<?php echo $form->textField($model,'broker_id'); ?>
-		<?php echo $form->error($model,'broker_id'); ?>
-	</div>
+	<div>
+<?php echo $form->labelEx($model,'broker_id'); ?>
+<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
+Broker::model()->findAll(), 'id', 'name'),
+array('prompt' => 'Select Broker')
+); ?>
+<?php echo $form->error($model,'broker_id'); ?>
+</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
