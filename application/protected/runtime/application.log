@@ -2648,3 +2648,11 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/commission/create
 HTTP_REFERER=http://localhost/yiiamrts/index.php/commission
 ---
+2013/11/29 07:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "g".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('g')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\student\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiamrts/index.php/g
+---

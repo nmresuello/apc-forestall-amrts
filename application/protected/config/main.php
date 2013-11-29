@@ -56,7 +56,7 @@ return array(
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=forestall amrts',
+			'connectionString' => 'mysql:host=localhost;dbname=forestall-amrts',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

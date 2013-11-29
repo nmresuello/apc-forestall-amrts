@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `forestall amrts`
+-- Database: `forestall-amrts`
 --
-CREATE DATABASE IF NOT EXISTS `forestall amrts` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `forestall amrts`;
+CREATE DATABASE IF NOT EXISTS `forestall-amrts` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `forestall-amrts`;
 
 -- --------------------------------------------------------
 
