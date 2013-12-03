@@ -41,7 +41,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('broker_name')); ?>:</b>
 	<?php echo CHtml::encode($data->broker_name); ?>
 	<br />
-
-	*/ ?>
+*/
+	 ?>
 
 </div>
