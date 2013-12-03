@@ -96,7 +96,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'payment_id'); ?>
 		<?php echo $form->dropDownList($model, 'payment_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'name'),
+            policy::model()->findAll(), 'id', 'paymenttype'),
             array('prompt' => 'Select a payment ID')); ?>
 		<?php echo $form->error($model,'payment_id'); ?>
 	</div>
