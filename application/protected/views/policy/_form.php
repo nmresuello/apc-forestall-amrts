@@ -97,15 +97,15 @@
 		<?php echo $form->labelEx($model,'payment_id'); ?>
 		<?php echo $form->dropDownList($model, 'payment_id', CHtml::listData(
             policy::model()->findAll(), 'id', 'paymenttype'),
-            array('prompt' => 'Select a payment ID')); ?>
+            array('prompt' => 'Select Payment')); ?>
 		<?php echo $form->error($model,'payment_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_company_id'); ?>
 		<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'name'),
-            array('prompt' => 'Select an insurance company ID')); ?>
+            policy::model()->findAll(), 'id', 'policy_id'),
+            array('prompt' => 'Select Insurance Company')); ?>
 		<?php echo $form->error($model,'insurance_company_id'); ?>
 	</div>
 
@@ -113,7 +113,7 @@
 		<?php echo $form->labelEx($model,'applicant_id'); ?>
 		<?php echo $form->dropDownList($model, 'applicant_id', CHtml::listData(
             policy::model()->findAll(), 'id', 'name'),
-            array('prompt' => 'Select an applicant ID'));?>
+            array('prompt' => 'Select Applicant'));?>
 		<?php echo $form->error($model,'applicant_id'); ?>
 	</div>
 

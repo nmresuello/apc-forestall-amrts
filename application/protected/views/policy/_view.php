@@ -33,7 +33,7 @@
 	<?php echo CHtml::encode($data->insureditems); ?>
 	<br />
 
-	<?php
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('termprice')); ?>:</b>
 	<?php echo CHtml::encode($data->termprice); ?>
 	<br />

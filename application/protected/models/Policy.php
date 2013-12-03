@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Policy".
+ * This is the model class for table "policy".
  *
- * The followings are the available columns in table 'Policy':
+ * The followings are the available columns in table 'policy':
  * @property integer $id
  * @property string $policy_dateissued
  * @property string $insurance_type
@@ -17,9 +17,10 @@
  * @property integer $applicant_id
  *
  * The followings are the available model relations:
- * @property Payment $payment
- * @property InsuranceCompany $insuranceCompany
+ * @property Claim[] $claims
  * @property Assured $applicant
+ * @property InsuranceCompany $insuranceCompany
+ * @property Payment $payment
  */
 class Policy extends CActiveRecord
 {
@@ -38,7 +39,7 @@ class Policy extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Policy';
+		return 'policy';
 	}
 
 	/**
@@ -68,9 +69,10 @@ class Policy extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'payment' => array(self::BELONGS_TO, 'Payment', 'payment_id'),
-			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
+			'claims' => array(self::HAS_MANY, 'Claim', 'policy_id'),
 			'applicant' => array(self::BELONGS_TO, 'Assured', 'applicant_id'),
+			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
+			'payment' => array(self::BELONGS_TO, 'Payment', 'payment_id'),
 		);
 	}
 
