@@ -99,19 +99,11 @@
 	</div>
 
 	<div class="row">
-<<<<<<< HEAD
 		<?php echo $form->labelEx($model,'applicant_id'); ?>
 		<?php echo $form->dropDownList($model, 'applicant_id', CHtml::listData(
             assured::model()->findAll(), 'id', 'client_firstname'),
             array('prompt' => 'Select Assured'));?>
 		<?php echo $form->error($model,'applicant_id'); ?>
-=======
-		<?php echo $form->labelEx($model,'assured_id'); ?>
-		<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'name'),
-            array('prompt' => 'Select Applicant'));?>
-		<?php echo $form->error($model,'assured_id'); ?>
->>>>>>> d4dd0a70a4cb7a938a7858a85274e7c5a8ecd0ec
 	</div>
 
 	<div class="row buttons">
