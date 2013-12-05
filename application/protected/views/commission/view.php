@@ -25,6 +25,6 @@ $this->menu=array(
 		'amount',
 		'receipt',
 		'date',
-		'broker_id',
+		'broker.broker_name',
 	),
 )); ?>

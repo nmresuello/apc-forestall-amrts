@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Policy".
+ * This is the model class for table "policy".
  *
- * The followings are the available columns in table 'Policy':
+ * The followings are the available columns in table 'policy':
  * @property integer $id
  * @property string $policy_dateissued
  * @property string $insurance_type
@@ -12,14 +12,14 @@
  * @property string $policy_coverage
  * @property string $insureditems
  * @property string $termprice
- * @property integer $payment_id
  * @property integer $insurance_company_id
- * @property integer $applicant_id
+ * @property integer $assured_id
  *
  * The followings are the available model relations:
- * @property Payment $payment
+ * @property Claim[] $claims
+ * @property Payment[] $payments
  * @property InsuranceCompany $insuranceCompany
- * @property Assured $applicant
+ * @property Assured $assured
  */
 class Policy extends CActiveRecord
 {
@@ -38,7 +38,7 @@ class Policy extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Policy';
+		return 'policy';
 	}
 
 	/**
@@ -49,14 +49,14 @@ class Policy extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('payment_id, insurance_company_id, applicant_id', 'required'),
-			array('payment_id, insurance_company_id, applicant_id', 'numerical', 'integerOnly'=>true),
+			array('insurance_company_id, assured_id', 'required'),
+			array('insurance_company_id, assured_id', 'numerical', 'integerOnly'=>true),
 			array('insurance_type, insurance_attachment_details, policy_coverage, insureditems', 'length', 'max'=>45),
 			array('termprice', 'length', 'max'=>6),
 			array('policy_dateissued, policy_date_expiration', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, policy_dateissued, insurance_type, insurance_attachment_details, policy_date_expiration, policy_coverage, insureditems, termprice, payment_id, insurance_company_id, applicant_id', 'safe', 'on'=>'search'),
+			array('id, policy_dateissued, insurance_type, insurance_attachment_details, policy_date_expiration, policy_coverage, insureditems, termprice, insurance_company_id, assured_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,9 +68,10 @@ class Policy extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'payment' => array(self::BELONGS_TO, 'Payment', 'payment_id'),
+			'claims' => array(self::HAS_MANY, 'Claim', 'policy_id'),
+			'payments' => array(self::HAS_MANY, 'Payment', 'policy_id'),
 			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
-			'applicant' => array(self::BELONGS_TO, 'Assured', 'applicant_id'),
+			'assured' => array(self::BELONGS_TO, 'Assured', 'assured_id'),
 		);
 	}
 
@@ -88,9 +89,8 @@ class Policy extends CActiveRecord
 			'policy_coverage' => 'Policy Coverage',
 			'insureditems' => 'Insureditems',
 			'termprice' => 'Termprice',
-			'payment_id' => 'Payment',
 			'insurance_company_id' => 'Insurance Company',
-			'applicant_id' => 'Applicant',
+			'assured_id' => 'Assured',
 		);
 	}
 
@@ -113,9 +113,8 @@ class Policy extends CActiveRecord
 		$criteria->compare('policy_coverage',$this->policy_coverage,true);
 		$criteria->compare('insureditems',$this->insureditems,true);
 		$criteria->compare('termprice',$this->termprice,true);
-		$criteria->compare('payment_id',$this->payment_id);
 		$criteria->compare('insurance_company_id',$this->insurance_company_id);
-		$criteria->compare('applicant_id',$this->applicant_id);
+		$criteria->compare('assured_id',$this->assured_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

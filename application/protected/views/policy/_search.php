@@ -52,18 +52,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'payment_id'); ?>
-		<?php echo $form->textField($model,'payment_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'insurance_company_id'); ?>
 		<?php echo $form->textField($model,'insurance_company_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'applicant_id'); ?>
-		<?php echo $form->textField($model,'applicant_id'); ?>
+		<?php echo $form->label($model,'assured_id'); ?>
+		<?php echo $form->textField($model,'assured_id'); ?>
 	</div>
 
 	<div class="row buttons">

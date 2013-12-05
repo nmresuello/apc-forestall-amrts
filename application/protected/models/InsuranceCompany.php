@@ -5,16 +5,27 @@
  *
  * The followings are the available columns in table 'insurance_company':
  * @property integer $id
- * @property integer $policy_id
+ * @property string $company_name
+ * @property string $company_address
  * @property integer $broker_id
+ * @property integer $policy_id
  *
  * The followings are the available model relations:
  * @property Broker $broker
- * @property InsuranceCompanyDetails[] $insuranceCompanyDetails
  * @property Policy[] $policies
  */
 class InsuranceCompany extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return InsuranceCompany the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -31,11 +42,12 @@ class InsuranceCompany extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('policy_id, broker_id', 'required'),
-			array('policy_id, broker_id', 'numerical', 'integerOnly'=>true),
+			array('broker_id, policy_id', 'required'),
+			array('broker_id, policy_id', 'numerical', 'integerOnly'=>true),
+			array('company_name, company_address', 'length', 'max'=>45),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, policy_id, broker_id', 'safe', 'on'=>'search'),
+			// Please remove those attributes that should not be searched.
+			array('id, company_name, company_address, broker_id, policy_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +60,6 @@ class InsuranceCompany extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'broker' => array(self::BELONGS_TO, 'Broker', 'broker_id'),
-			'insuranceCompanyDetails' => array(self::HAS_MANY, 'InsuranceCompanyDetails', 'insurance_company_id'),
 			'policies' => array(self::HAS_MANY, 'Policy', 'insurance_company_id'),
 		);
 	}
@@ -60,46 +71,32 @@ class InsuranceCompany extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'policy_id' => 'Policy',
+			'company_name' => 'Company Name',
+			'company_address' => 'Company Address',
 			'broker_id' => 'Broker',
+			'policy_id' => 'Policy',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('policy_id',$this->policy_id);
+		$criteria->compare('company_name',$this->company_name,true);
+		$criteria->compare('company_address',$this->company_address,true);
 		$criteria->compare('broker_id',$this->broker_id);
+		$criteria->compare('policy_id',$this->policy_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return InsuranceCompany the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }

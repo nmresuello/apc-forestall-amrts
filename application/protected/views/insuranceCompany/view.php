@@ -22,7 +22,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'policy_id',
+		'company_name',
+		'company_address',
 		'broker_id',
+		'policy_id',
 	),
 )); ?>

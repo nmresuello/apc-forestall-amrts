@@ -29,8 +29,7 @@ $this->menu=array(
 		'policy_coverage',
 		'insureditems',
 		'termprice',
-		'payment_id',
 		'insurance_company_id',
-		'applicant_id',
+		'assured_id',
 	),
 )); ?>
