@@ -26,5 +26,8 @@ Yii::app()->clientScript->registerCoreScript('jquery');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/03.jpg', 'alt 3');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/04.jpg', 'alt 4');
   echo CHtml::image(Yii::app()->request->baseUrl . '/images/05.jpg', 'alt 5');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/06.jpg', 'alt 6');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/07.jpg', 'alt 7');
+  echo CHtml::image(Yii::app()->request->baseUrl . '/images/08.jpg', 'alt 8');
   ?>
   </div>
