@@ -112,8 +112,8 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'applicant_id'); ?>
 		<?php echo $form->dropDownList($model, 'applicant_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'name'),
-            array('prompt' => 'Select an applicant ID'));?>
+            assured::model()->findAll(), 'id', 'client_firstname'),
+            array('prompt' => 'Select Assured'));?>
 		<?php echo $form->error($model,'applicant_id'); ?>
 	</div>
 
