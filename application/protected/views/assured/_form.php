@@ -35,9 +35,7 @@
 
 		<div class="row">
 		<?php echo $form->labelEx($model,'gender'); ?>
-		<?php echo CHtml::dropDownList('listname', $model,
-		array('M' => 'Male', 'F' => 'Female'),
-		array('empty' => 'Select Gender'));?>
+		<?php echo "<select name='gender'> <option value='Male'>M</option> <option value='Female'>F</option> </select>";?>
 		<?php echo $form->error($model,'gender'); ?>
 	</div>
 	<div class="row">

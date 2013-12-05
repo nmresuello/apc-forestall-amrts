@@ -3905,3 +3905,168 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/yiiamrts/index.php/assured/gii
 ---
+2013/12/05 20:38:16 [error] [exception.CException] exception 'CException' with message 'Property "Policy.applicant_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('applicant_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('applicant_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(Policy), 'applicant_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(Policy), 'applicant_id', Array, Array)
+#4 C:\xampp\htdocs\Marion\protected\views\policy\_form.php(105): CActiveForm->dropDownList(Object(Policy), 'applicant_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Marion\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\Marion\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Marion\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/marion/index.php/policy/create
+HTTP_REFERER=http://localhost/marion/index.php/Policy
+---
+2013/12/05 20:39:31 [error] [exception.CException] exception 'CException' with message 'Property "Policy.applicant_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('applicant_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('applicant_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(Policy), 'applicant_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(Policy), 'applicant_id', Array, Array)
+#4 C:\xampp\htdocs\Marion\protected\views\policy\_form.php(105): CActiveForm->dropDownList(Object(Policy), 'applicant_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Marion\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\Marion\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Marion\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/marion/index.php/policy/create
+HTTP_REFERER=http://localhost/marion/index.php/Policy
+---
+2013/12/05 20:46:46 [error] [exception.CException] exception 'CException' with message 'Property "Policy.applicant_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('applicant_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('applicant_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(Policy), 'applicant_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(Policy), 'applicant_id', Array, Array)
+#4 C:\xampp\htdocs\Marion\protected\views\policy\_form.php(105): CActiveForm->dropDownList(Object(Policy), 'applicant_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Marion\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\Marion\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Marion\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/marion/index.php/policy/create
+HTTP_REFERER=http://localhost/marion/index.php/Policy
+---
+2013/12/05 20:47:48 [error] [exception.CException] exception 'CException' with message 'Property "Policy.applicant_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('applicant_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('applicant_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(Policy), 'applicant_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(Policy), 'applicant_id', Array, Array)
+#4 C:\xampp\htdocs\Marion\protected\views\policy\_form.php(105): CActiveForm->dropDownList(Object(Policy), 'applicant_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Marion\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\Marion\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Marion\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/marion/index.php/policy/create
+HTTP_REFERER=http://localhost/marion/index.php/Policy
+---
+2013/12/05 20:49:10 [error] [exception.CException] exception 'CException' with message 'Property "Policy.applicant_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('applicant_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('applicant_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1515): CHtml::resolveValue(Object(Policy), 'applicant_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(764): CHtml::activeDropDownList(Object(Policy), 'applicant_id', Array, Array)
+#4 C:\xampp\htdocs\Marion\protected\views\policy\_form.php(105): CActiveForm->dropDownList(Object(Policy), 'applicant_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\Marion\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\Marion\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\Marion\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/marion/index.php/policy/create
+HTTP_REFERER=http://localhost/marion/index.php/policy/index
+---
