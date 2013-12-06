@@ -18,8 +18,8 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'client_firstname'),
-            array('prompt' => 'Select Assured'));?>
+            policy::model()->findAll(), 'id', 'id'),
+            array('prompt' => 'Select Policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
 
