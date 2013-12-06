@@ -53,7 +53,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'type_of_accident',
 		/*
 		'insured_items',
-		'date',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -15,10 +15,14 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<d<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
+<<<<<<< HEAD
             policy::model()->findAll(), 'id', 'id'),
+=======
+            claim::model()->findAll(), 'id', 'insurance_type'),
+>>>>>>> bd68e006763ba201093841bad3c75d066b45ef91
             array('prompt' => 'Select Policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
@@ -52,28 +56,6 @@
 		<?php echo $form->textArea($model,'insured_items',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'insured_items'); ?>
 	</div>
-
-<div class="row">
-		<?php echo $form->labelEx($model,'Date'); ?>
-		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
-                    'model'=>$model,
-                    'attribute'=>'date',
-                    'name'=>'date',
-                    'options'=>array(
-                        'dateFormat'=>'yy-mm-dd', 
-                                'changeMonth'=> true,
-                                'changeYear'=>true,
-                        'showAnim'=>'fold', 
-                        'showOn'=>'button', 
-                        'buttonImage'=>Yii::app()->request->baseUrl.'/calendar.png',
-                        'buttonImageOnly'=>true,
-                        'yearRange'=>'1960:2020',
-                    ),
-                    'htmlOptions'=>array(
-                        'style'=>'width:80px;vertical-align:top'
-                    ),
-                        ));
-                ?>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

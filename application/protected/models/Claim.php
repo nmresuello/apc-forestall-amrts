@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Claim".
+ * This is the model class for table "claim".
  *
- * The followings are the available columns in table 'Claim':
+ * The followings are the available columns in table 'claim':
  * @property integer $id
  * @property integer $policy_id
  * @property string $lastname
@@ -11,7 +11,6 @@
  * @property string $description
  * @property string $type_of_accident
  * @property string $insured_items
- * @property string $date
  *
  * The followings are the available model relations:
  * @property Policy $policy
@@ -33,7 +32,7 @@ class Claim extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Claim';
+		return 'claim';
 	}
 
 	/**
@@ -47,10 +46,10 @@ class Claim extends CActiveRecord
 			array('policy_id, description', 'required'),
 			array('policy_id', 'numerical', 'integerOnly'=>true),
 			array('lastname, firstname, type_of_accident', 'length', 'max'=>45),
-			array('insured_items, date', 'safe'),
+			array('insured_items', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, policy_id, lastname, firstname, description, type_of_accident, insured_items, date', 'safe', 'on'=>'search'),
+			array('id, policy_id, lastname, firstname, description, type_of_accident, insured_items', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,7 +78,6 @@ class Claim extends CActiveRecord
 			'description' => 'Description',
 			'type_of_accident' => 'Type Of Accident',
 			'insured_items' => 'Insured Items',
-			'date' => 'Date',
 		);
 	}
 
@@ -101,7 +99,6 @@ class Claim extends CActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('type_of_accident',$this->type_of_accident,true);
 		$criteria->compare('insured_items',$this->insured_items,true);
-		$criteria->compare('date',$this->date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

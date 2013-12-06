@@ -45,9 +45,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Attachment Details'); ?>
-		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'insurance_attachment_details'); ?>
+		<?php //echo $form->labelEx($model,'Attachment Details'); ?>
+		<?php //echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
+		<?php //echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
 <div class="row">
@@ -105,6 +105,21 @@
             array('prompt' => 'Select Assured'));?>
 		<?php echo $form->error($model,'assured_id'); ?>
 	</div>
+	
+	
+	<div class="row">
+<?php echo $form->labelEx($model,'file'); ?>
+	<?php  $this->widget('CMultiFileUpload',array(
+		'model'=>$model,
+  	    'attribute' => 'attachment',
+	    'accept'=> 'jpeg|jpg|gif|png',
+		'denied'=>'Only jpeg,jpg,gif and png are allowed',
+       'max'=>7,
+       'remove'=>'[remove]',
+       'duplicate'=>'Already Selected',
+    ));?>
+ </div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

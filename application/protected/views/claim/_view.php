@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy_id); ?>
+	<?php echo CHtml::encode($data->policy->insurance_type); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('lastname')); ?>:</b>
@@ -33,11 +33,5 @@
 	<?php echo CHtml::encode($data->insured_items); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date')); ?>:</b>
-	<?php echo CHtml::encode($data->date); ?>
-	<br />
-
-	*/ ?>
 
 </div>
