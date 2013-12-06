@@ -45,9 +45,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Attachment Details'); ?>
-		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'insurance_attachment_details'); ?>
+		<?php //echo $form->labelEx($model,'Attachment Details'); ?>
+		<?php //echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
+		<?php //echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
 <div class="row">
