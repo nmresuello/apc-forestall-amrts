@@ -16,15 +16,27 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'policy_id'); ?>
-		<?php echo $form->textField($model,'policy_id'); ?>
-		<?php echo $form->error($model,'policy_id'); ?>
+		<?php echo $form->labelEx($model,'company_name'); ?>
+		<?php echo $form->textField($model,'company_name',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'company_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'company_address'); ?>
+		<?php echo $form->textField($model,'company_address',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'company_address'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'broker_id'); ?>
 		<?php echo $form->textField($model,'broker_id'); ?>
 		<?php echo $form->error($model,'broker_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'policy_id'); ?>
+		<?php echo $form->textField($model,'policy_id'); ?>
+		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
 
 	<div class="row buttons">

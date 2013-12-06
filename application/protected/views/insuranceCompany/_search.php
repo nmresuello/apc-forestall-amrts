@@ -17,13 +17,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'policy_id'); ?>
-		<?php echo $form->textField($model,'policy_id'); ?>
+		<?php echo $form->label($model,'company_name'); ?>
+		<?php echo $form->textField($model,'company_name',array('size'=>45,'maxlength'=>45)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'company_address'); ?>
+		<?php echo $form->textField($model,'company_address',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'broker_id'); ?>
 		<?php echo $form->textField($model,'broker_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'policy_id'); ?>
+		<?php echo $form->textField($model,'policy_id'); ?>
 	</div>
 
 	<div class="row buttons">
