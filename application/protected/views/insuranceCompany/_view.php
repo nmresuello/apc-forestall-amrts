@@ -22,7 +22,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy_id); ?>
+	<?php echo CHtml::encode($data->policy->insurance_type); ?>
 	<br />
 
 
