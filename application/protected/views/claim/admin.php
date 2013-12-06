@@ -47,10 +47,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'policy_id',
-		'description',
-		'type_of_accident',
-		'insured_items',
-		'date',
+		'lastname',
+		'firstname',
+		'middlename',
+		'birthday',
+		/*
+		'address',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

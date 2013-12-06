@@ -10,23 +10,27 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy_id); ?>
+	<?php echo CHtml::encode($data->policy->insurance_type); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
-	<?php echo CHtml::encode($data->description); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('lastname')); ?>:</b>
+	<?php echo CHtml::encode($data->lastname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('type_of_accident')); ?>:</b>
-	<?php echo CHtml::encode($data->type_of_accident); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('firstname')); ?>:</b>
+	<?php echo CHtml::encode($data->firstname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('insured_items')); ?>:</b>
-	<?php echo CHtml::encode($data->insured_items); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('middlename')); ?>:</b>
+	<?php echo CHtml::encode($data->middlename); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date')); ?>:</b>
-	<?php echo CHtml::encode($data->date); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('birthday')); ?>:</b>
+	<?php echo CHtml::encode($data->birthday); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
+	<?php echo CHtml::encode($data->address); ?>
 	<br />
 
 
