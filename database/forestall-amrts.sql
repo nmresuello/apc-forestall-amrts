@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2013 at 06:56 AM
+-- Generation Time: Dec 06, 2013 at 07:22 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `assured` (
   `client_lastname` varchar(45) DEFAULT NULL,
   `client_firstname` varchar(45) DEFAULT NULL,
   `client_middlename` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
   `address` varchar(45) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `email_add` varchar(45) DEFAULT NULL,
@@ -57,14 +58,7 @@ CREATE TABLE IF NOT EXISTS `broker` (
   `broker_address` varchar(45) DEFAULT NULL,
   `broker_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `broker`
---
-
-INSERT INTO `broker` (`id`, `owner_firstname`, `owner_lastname`, `owner_middlename`, `employee_firstname`, `employee_middlename`, `employee_lastname`, `broker_address`, `broker_name`) VALUES
-(1, 'Jenny', 'Anne', 'Anastacio', 'Marion', 'Chlo', 'Cambay', 'Magallanes', 'APC');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -99,14 +93,7 @@ CREATE TABLE IF NOT EXISTS `commission` (
   `broker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_commission_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `commission`
---
-
-INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
-(1, '19900', '133', '2013-12-07', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
