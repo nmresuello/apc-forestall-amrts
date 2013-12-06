@@ -34,7 +34,7 @@ $this->menu=array(
 	),
 ));
 
-	$sql = Attachment::model()->findAll('member_id='.$model->id);
+	$sql = Attachment::model()->findAll('policy_id='.$model->id);
 	foreach ($sql as $a) {
 	echo "<img src='".Yii::app()->baseUrl."/uploads/".$a->filename."' width='50' height='50'/><br/>";
 	}
