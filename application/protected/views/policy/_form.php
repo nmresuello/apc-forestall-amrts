@@ -105,6 +105,21 @@
             array('prompt' => 'Select Assured'));?>
 		<?php echo $form->error($model,'assured_id'); ?>
 	</div>
+	
+	
+	<div class="row">
+<?php echo $form->labelEx($model,'file'); ?>
+	<?php  $this->widget('CMultiFileUpload',array(
+		'model'=>$model,
+  	    'attribute' => 'attachment',
+	    'accept'=> 'jpeg|jpg|gif|png',
+		'denied'=>'Only jpeg,jpg,gif and png are allowed',
+       'max'=>7,
+       'remove'=>'[remove]',
+       'duplicate'=>'Already Selected',
+    ));?>
+ </div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

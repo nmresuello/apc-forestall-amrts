@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Dec 06, 2013 at 06:31 AM
+=======
+-- Generation Time: Dec 06, 2013 at 01:14 AM
+>>>>>>> 54c0af29019675ccff13e962f58cc74c42c41a91
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -33,12 +37,12 @@ CREATE TABLE IF NOT EXISTS `assured` (
   `client_lastname` varchar(45) DEFAULT NULL,
   `client_firstname` varchar(45) DEFAULT NULL,
   `client_middlename` varchar(45) DEFAULT NULL,
-  `gender` varchar(45) DEFAULT NULL,
   `address` varchar(45) DEFAULT NULL,
   `age` int(11) DEFAULT NULL,
   `email_add` varchar(45) DEFAULT NULL,
   `contact_number` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
@@ -62,6 +66,9 @@ CREATE TABLE IF NOT EXISTS `attachment` (
   `attachments` blob NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+>>>>>>> 54c0af29019675ccff13e962f58cc74c42c41a91
 
 -- --------------------------------------------------------
 
@@ -80,14 +87,7 @@ CREATE TABLE IF NOT EXISTS `broker` (
   `broker_address` varchar(45) DEFAULT NULL,
   `broker_name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `broker`
---
-
-INSERT INTO `broker` (`id`, `owner_firstname`, `owner_lastname`, `owner_middlename`, `employee_firstname`, `employee_middlename`, `employee_lastname`, `broker_address`, `broker_name`) VALUES
-(1, 'Marion', 'Cambay', 'Yambao', 'Jenny', 'Anne', 'Anastacio', 'Pasay City', 'APC');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -98,12 +98,12 @@ INSERT INTO `broker` (`id`, `owner_firstname`, `owner_lastname`, `owner_middlena
 CREATE TABLE IF NOT EXISTS `claim` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `policy_id` int(11) NOT NULL,
-  `date` date NOT NULL,
   `lastname` varchar(45) DEFAULT NULL,
   `firstname` varchar(45) DEFAULT NULL,
   `description` text NOT NULL,
   `type_of_accident` varchar(45) DEFAULT NULL,
   `insured_items` text,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_claim_policy1_idx` (`policy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -122,14 +122,7 @@ CREATE TABLE IF NOT EXISTS `commission` (
   `broker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_commission_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `commission`
---
-
-INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
-(1, '1000', '', '2013-12-05', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -145,14 +138,7 @@ CREATE TABLE IF NOT EXISTS `insurance_company` (
   `policy_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_insurance company_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `insurance_company`
---
-
-INSERT INTO `insurance_company` (`id`, `company_name`, `company_address`, `broker_id`, `policy_id`) VALUES
-(1, 'APC', 'Magallanes, Makati City', 1, 2);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -193,14 +179,7 @@ CREATE TABLE IF NOT EXISTS `policy` (
   PRIMARY KEY (`id`),
   KEY `fk_policy_insurance company1_idx` (`insurance_company_id`),
   KEY `fk_policy_assured1_idx` (`assured_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `policy`
---
-
-INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_type`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`) VALUES
-(2, '2013-12-06', 'Car Insurance', '', '2015-12-06', '', '', '0.00', 1, 2);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
@@ -222,7 +201,7 @@ ALTER TABLE `commission`
 -- Constraints for table `insurance_company`
 --
 ALTER TABLE `insurance_company`
-  ADD CONSTRAINT `fk_insurance?company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_insurance company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `payment`
@@ -235,8 +214,8 @@ ALTER TABLE `payment`
 -- Constraints for table `policy`
 --
 ALTER TABLE `policy`
-  ADD CONSTRAINT `fk_policy_assured1` FOREIGN KEY (`assured_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_policy_insurance company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_policy_assured1` FOREIGN KEY (`assured_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
