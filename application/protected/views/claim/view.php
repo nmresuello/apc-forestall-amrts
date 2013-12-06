@@ -28,5 +28,6 @@ $this->menu=array(
 		'description',
 		'type_of_accident',
 		'insured_items',
+		'date',
 	),
 )); ?>
