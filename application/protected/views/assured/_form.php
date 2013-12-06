@@ -34,7 +34,10 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
+=======
 		<?php echo $form->labelEx($model,'Address'); ?>
+>>>>>>> d4dd0a70a4cb7a938a7858a85274e7c5a8ecd0ec
 		<?php echo $form->labelEx($model,'gender'); ?>
 		<?php echo CHtml::dropDownList('listname', $model,
 		array('M' => 'Male', 'F' => 'Female'),
