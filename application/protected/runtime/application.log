@@ -4383,33 +4383,6 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/Insurancecompany
 HTTP_REFERER=http://localhost/yiiamrts/index.php/Assured
 ---
-<<<<<<< HEAD
-2013/12/06 06:32:20 [error] [exception.CException] exception 'CException' with message 'Property "Assured.gender" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
-Stack trace:
-#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('gender')
-#1 C:\xampp\htdocs\yii\framework\validators\CStringValidator.php(79): CActiveRecord->__get('gender')
-#2 C:\xampp\htdocs\yii\framework\validators\CValidator.php(213): CStringValidator->validateAttribute(Object(Assured), 'gender')
-#3 C:\xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(Assured), NULL)
-#4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
-#5 C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\AssuredController.php(73): CActiveRecord->save()
-#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AssuredController->actionCreate()
-#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
-#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
-#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
-#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
-#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
-#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
-#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
-#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
-#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assured/create')
-#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
-#18 C:\Users\student\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
-#19 {main}
-REQUEST_URI=/yiiamrts/index.php/assured/create
-HTTP_REFERER=http://localhost/yiiamrts/index.php/assured/create
----
-=======
 2013/12/06 05:42:15 [error] [exception.CException] exception 'CException' with message 'Property "InsuranceCompany.policy" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
 Stack trace:
 #0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('policy')
@@ -4713,6 +4686,7 @@ REQUEST_URI=/marion/index.php/policy/create
 in C:\xampp\htdocs\marion\protected\views\policy\_form.php (113)
 in C:\xampp\htdocs\marion\protected\views\policy\create.php (18)
 in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (79)
+<<<<<<< HEAD
 >>>>>>> bd68e006763ba201093841bad3c75d066b45ef91
 2013/12/06 07:15:49 [error] [exception.CException] exception 'CException' with message 'Property "Assured.gender" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
 Stack trace:
@@ -4723,6 +4697,57 @@ Stack trace:
 #4 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
 #5 C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\AssuredController.php(73): CActiveRecord->save()
 #6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AssuredController->actionCreate()
+=======
+2013/12/06 06:43:54 [warning] [application] Failed to set unsafe attribute "attachment" of "Policy".
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (72)
+in C:\xampp\htdocs\marion\index.php (13)
+2013/12/06 06:43:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'member_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `attachment` `t` WHERE member_id=3.
+in C:\xampp\htdocs\marion\protected\views\policy\view.php (37)
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (56)
+in C:\xampp\htdocs\marion\index.php (13)
+2013/12/06 06:43:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'member_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `attachment` `t` WHERE member_id=3' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\marion\protected\views\policy\view.php(37): CActiveRecord->findAll('member_id=3')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#8 C:\xampp\htdocs\marion\protected\controllers\PolicyController.php(56): CController->render('view', Array)
+#9 [internal function]: PolicyController->actionView('3')
+#10 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PolicyController), Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PolicyController), Object(ReflectionMethod), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/view')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\marion\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/marion/index.php/policy/3
+HTTP_REFERER=http://localhost/marion/index.php/policy/create
+---
+2013/12/06 06:59:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.policy' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `policy`.
+in C:\xampp\htdocs\marion\protected\models\Policy.php (33)
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (155)
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (89)
+2013/12/06 06:59:02 [error] [exception.CDbException] exception 'CDbException' with message 'The table "policy" for active record class "Policy" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Policy))
+#1 C:\xampp\htdocs\marion\protected\models\Policy.php(33): CActiveRecord::model('Policy')
+#2 C:\xampp\htdocs\marion\protected\controllers\PolicyController.php(155): Policy::model()
+#3 C:\xampp\htdocs\marion\protected\controllers\PolicyController.php(89): PolicyController->loadModel('2')
+#4 [internal function]: PolicyController->actionUpdate('2')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PolicyController), Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PolicyController), Object(ReflectionMethod), Array)
 #7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
 #8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
 #9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
@@ -4731,6 +4756,37 @@ Stack trace:
 #12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
 #14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/update')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\marion\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/marion/index.php/policy/update/2
+HTTP_REFERER=http://localhost/marion/index.php/policy/admin
+---
+2013/12/06 07:00:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.policy' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `policy`.
+in C:\xampp\htdocs\marion\protected\models\Policy.php (33)
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (155)
+in C:\xampp\htdocs\marion\protected\controllers\PolicyController.php (89)
+2013/12/06 07:00:14 [error] [exception.CDbException] exception 'CDbException' with message 'The table "policy" for active record class "Policy" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Policy))
+#1 C:\xampp\htdocs\marion\protected\models\Policy.php(33): CActiveRecord::model('Policy')
+#2 C:\xampp\htdocs\marion\protected\controllers\PolicyController.php(155): Policy::model()
+#3 C:\xampp\htdocs\marion\protected\controllers\PolicyController.php(89): PolicyController->loadModel('2')
+#4 [internal function]: PolicyController->actionUpdate('2')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PolicyController), Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PolicyController), Object(ReflectionMethod), Array)
+>>>>>>> ba96e7de737ac56e7876d1a640d4422312420135
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+<<<<<<< HEAD
 #15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
 #16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assured/create')
 #17 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -4739,3 +4795,15 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/assured/create
 HTTP_REFERER=http://localhost/yiiamrts/index.php/assured/create
 ---
+=======
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/update')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\marion\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/marion/index.php/policy/update/2
+HTTP_REFERER=http://localhost/marion/index.php/policy/admin
+---
+2013/12/06 07:07:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.attachments' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `attachments`.
+in C:\xampp\htdocs\marion\index.php (13)
+>>>>>>> ba96e7de737ac56e7876d1a640d4422312420135

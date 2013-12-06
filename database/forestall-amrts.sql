@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Dec 06, 2013 at 07:22 AM
+=======
+-- Generation Time: Dec 06, 2013 at 07:08 AM
+>>>>>>> ba96e7de737ac56e7876d1a640d4422312420135
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -40,6 +44,20 @@ CREATE TABLE IF NOT EXISTS `assured` (
   `contact_number` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attachment`
+--
+
+CREATE TABLE IF NOT EXISTS `attachment` (
+  `id` int(11) NOT NULL,
+  `policy_id` int(11) NOT NULL,
+  `filename` varchar(100) NOT NULL,
+  `attachments` blob NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

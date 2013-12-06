@@ -18,11 +18,7 @@
 	<d<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-<<<<<<< HEAD
-            policy::model()->findAll(), 'id', 'id'),
-=======
             claim::model()->findAll(), 'id', 'insurance_type'),
->>>>>>> bd68e006763ba201093841bad3c75d066b45ef91
             array('prompt' => 'Select Policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>

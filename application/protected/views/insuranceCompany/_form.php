@@ -29,17 +29,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'broker_id'); ?>
-		<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
-            broker::model()->findAll(), 'id', 'broker_name'),
-            array('prompt' => 'Select Broker'));?>
-		<?php echo $form->error($model,'broker_name'); ?>
+		<?php echo $form->textField($model,'broker_id'); ?>
+		<?php echo $form->error($model,'broker_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
-		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'id'),
-            array('prompt' => 'Select Policy'));?>
+		<?php echo $form->textField($model,'policy_id'); ?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
 
