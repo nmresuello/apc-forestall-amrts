@@ -15,7 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<d<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
             claim::model()->findAll(), 'id', 'insurance_type'),
@@ -36,21 +36,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'middlename'); ?>
-		<?php echo $form->textField($model,'middlename',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'middlename'); ?>
+		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'birthday'); ?>
-		<?php echo $form->textField($model,'birthday',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'birthday'); ?>
+		<?php echo $form->labelEx($model,'type_of_accident'); ?>
+		<?php echo $form->textField($model,'type_of_accident',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'type_of_accident'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'address'); ?>
+		<?php echo $form->labelEx($model,'insured_items'); ?>
+		<?php echo $form->textArea($model,'insured_items',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'insured_items'); ?>
 	</div>
 
 	<div class="row buttons">

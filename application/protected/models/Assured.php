@@ -45,7 +45,6 @@ class Assured extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('client_lastname, client_firstname, client_middlename', 'required'),
 			array('age', 'numerical', 'integerOnly'=>true),
 			array('client_lastname, client_firstname, client_middlename, gender, address, email_add, contact_number', 'length', 'max'=>45),
 			// The following rule is used by search().
@@ -62,7 +61,7 @@ class Assured extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'policies' => array(self::HAS_MANY, 'Policy', 'applicant_id'),
+			'policies' => array(self::HAS_MANY, 'Policy', 'assured_id'),
 		);
 	}
 

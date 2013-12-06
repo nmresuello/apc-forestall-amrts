@@ -3885,3 +3885,23 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/claim/create
 HTTP_REFERER=http://localhost/yiiamrts/index.php/Claim
 ---
+2013/12/06 07:50:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cgii".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('cgii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('cgii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assured/cgii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiamrts/index.php/assured/cgii
+---
+2013/12/06 07:50:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('gii')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('assured/gii')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiamrts/index.php/assured/gii
+---

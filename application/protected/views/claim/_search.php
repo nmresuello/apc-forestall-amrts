@@ -32,18 +32,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'middlename'); ?>
-		<?php echo $form->textField($model,'middlename',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'birthday'); ?>
-		<?php echo $form->textField($model,'birthday',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'type_of_accident'); ?>
+		<?php echo $form->textField($model,'type_of_accident',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->label($model,'insured_items'); ?>
+		<?php echo $form->textArea($model,'insured_items',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row buttons">

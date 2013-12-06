@@ -21,16 +21,16 @@
 	<?php echo CHtml::encode($data->firstname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('middlename')); ?>:</b>
-	<?php echo CHtml::encode($data->middlename); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
+	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('birthday')); ?>:</b>
-	<?php echo CHtml::encode($data->birthday); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('type_of_accident')); ?>:</b>
+	<?php echo CHtml::encode($data->type_of_accident); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
-	<?php echo CHtml::encode($data->address); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('insured_items')); ?>:</b>
+	<?php echo CHtml::encode($data->insured_items); ?>
 	<br />
 
 

@@ -25,8 +25,8 @@ $this->menu=array(
 		'policy_id',
 		'lastname',
 		'firstname',
-		'middlename',
-		'birthday',
-		'address',
+		'description',
+		'type_of_accident',
+		'insured_items',
 	),
 )); ?>

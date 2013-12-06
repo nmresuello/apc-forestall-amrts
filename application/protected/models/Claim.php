@@ -8,9 +8,9 @@
  * @property integer $policy_id
  * @property string $lastname
  * @property string $firstname
- * @property string $middlename
- * @property string $birthday
- * @property string $address
+ * @property string $description
+ * @property string $type_of_accident
+ * @property string $insured_items
  *
  * The followings are the available model relations:
  * @property Policy $policy
@@ -43,12 +43,13 @@ class Claim extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('policy_id', 'required'),
+			array('policy_id, description', 'required'),
 			array('policy_id', 'numerical', 'integerOnly'=>true),
-			array('lastname, firstname, middlename, birthday, address', 'length', 'max'=>45),
+			array('lastname, firstname, type_of_accident', 'length', 'max'=>45),
+			array('insured_items', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, policy_id, lastname, firstname, middlename, birthday, address', 'safe', 'on'=>'search'),
+			array('id, policy_id, lastname, firstname, description, type_of_accident, insured_items', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,9 +75,9 @@ class Claim extends CActiveRecord
 			'policy_id' => 'Policy',
 			'lastname' => 'Lastname',
 			'firstname' => 'Firstname',
-			'middlename' => 'Middlename',
-			'birthday' => 'Birthday',
-			'address' => 'Address',
+			'description' => 'Description',
+			'type_of_accident' => 'Type Of Accident',
+			'insured_items' => 'Insured Items',
 		);
 	}
 
@@ -95,9 +96,9 @@ class Claim extends CActiveRecord
 		$criteria->compare('policy_id',$this->policy_id);
 		$criteria->compare('lastname',$this->lastname,true);
 		$criteria->compare('firstname',$this->firstname,true);
-		$criteria->compare('middlename',$this->middlename,true);
-		$criteria->compare('birthday',$this->birthday,true);
-		$criteria->compare('address',$this->address,true);
+		$criteria->compare('description',$this->description,true);
+		$criteria->compare('type_of_accident',$this->type_of_accident,true);
+		$criteria->compare('insured_items',$this->insured_items,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

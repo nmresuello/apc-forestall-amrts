@@ -49,10 +49,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'policy_id',
 		'lastname',
 		'firstname',
-		'middlename',
-		'birthday',
+		'description',
+		'type_of_accident',
 		/*
-		'address',
+		'insured_items',
 		*/
 		array(
 			'class'=>'CButtonColumn',
