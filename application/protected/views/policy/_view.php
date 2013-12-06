@@ -38,16 +38,12 @@
 	<?php echo CHtml::encode($data->termprice); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_id')); ?>:</b>
-	<?php echo CHtml::encode($data->payment_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_company_id')); ?>:</b>
 	<?php echo CHtml::encode($data->insurance_company_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('applicant_id')); ?>:</b>
-	<?php echo CHtml::encode($data->applicant_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('assured_id')); ?>:</b>
+	<?php echo CHtml::encode($data->assured_id); ?>
 	<br />
 
 	*/ ?>

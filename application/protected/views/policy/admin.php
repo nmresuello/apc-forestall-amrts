@@ -54,9 +54,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		/*
 		'insureditems',
 		'termprice',
-		'payment_id',
 		'insurance_company_id',
-		'applicant_id',
+		'assured_id',
 		*/
 		array(
 			'class'=>'CButtonColumn',

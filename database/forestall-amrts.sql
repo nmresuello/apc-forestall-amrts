@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2013 at 03:33 AM
+-- Generation Time: Dec 06, 2013 at 03:59 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -144,10 +144,10 @@ CREATE TABLE IF NOT EXISTS `policy` (
   `insureditems` varchar(45) DEFAULT NULL,
   `termprice` decimal(6,2) DEFAULT NULL,
   `insurance_company_id` int(11) NOT NULL,
-  `applicant_id` int(11) NOT NULL,
+  `assured_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_policy_insurance company1_idx` (`insurance_company_id`),
-  KEY `fk_policy_applicant1_idx` (`applicant_id`)
+  KEY `fk_policy_assured1_idx` (`assured_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
@@ -184,7 +184,7 @@ ALTER TABLE `payment`
 --
 ALTER TABLE `policy`
   ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_policy_applicant1` FOREIGN KEY (`applicant_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_policy_assured1` FOREIGN KEY (`assured_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

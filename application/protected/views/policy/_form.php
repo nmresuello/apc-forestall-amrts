@@ -15,6 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_dateissued'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -36,12 +37,10 @@
                     ),
                         ));
                 ?>
-		<?php echo $form->error($model,'policy_dateissued'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_type'); ?>
-		<?php echo $form->textField($model,'insurance_type'); ?>
+		<?php echo $form->textField($model,'insurance_type',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'insurance_type'); ?>
 	</div>
 
@@ -51,7 +50,7 @@
 		<?php echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
-	<div class="row">
+<div class="row">
 		<?php echo $form->labelEx($model,'policy_date_expiration'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
@@ -72,8 +71,6 @@
                     ),
                         ));
                 ?>
-		<?php echo $form->error($model,'policy_date_expiration'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_coverage'); ?>
@@ -94,14 +91,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'payment_id'); ?>
-		<?php echo $form->dropDownList($model, 'payment_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'paymenttype'),
-            array('prompt' => 'Select Payment')); ?>
-		<?php echo $form->error($model,'payment_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_company_id'); ?>
 		<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
             policy::model()->findAll(), 'id', 'policy_id'),
@@ -110,11 +99,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'applicant_id'); ?>
-		<?php echo $form->dropDownList($model, 'applicant_id', CHtml::listData(
+		<?php echo $form->labelEx($model,'assured_id'); ?>
+		<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
             policy::model()->findAll(), 'id', 'name'),
             array('prompt' => 'Select Applicant'));?>
-		<?php echo $form->error($model,'applicant_id'); ?>
+		<?php echo $form->error($model,'assured_id'); ?>
 	</div>
 
 	<div class="row buttons">

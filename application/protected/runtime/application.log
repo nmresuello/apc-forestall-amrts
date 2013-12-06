@@ -3406,3 +3406,140 @@ Stack trace:
 #16 {main}
 REQUEST_URI=/yiiamrts/index.php/Insurancecompanydetails
 ---
+2013/12/06 03:43:20 [error] [exception.CException] exception 'CException' with message 'Property "Policy.payment_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('payment_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('payment_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Policy), 'payment_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Policy), 'payment_id', Array, Array)
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\_form.php(100): CActiveForm->dropDownList(Object(Policy), 'payment_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiamrts/index.php/policy/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/Policy
+---
+2013/12/06 03:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/policy".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/policy')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiamrts/index.php/gii/policy
+---
+2013/12/06 03:45:17 [error] [exception.CException] exception 'CException' with message 'Property "Policy.payment_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('payment_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('payment_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Policy), 'payment_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Policy), 'payment_id', Array, Array)
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\_form.php(100): CActiveForm->dropDownList(Object(Policy), 'payment_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiamrts/index.php/policy/create
+---
+2013/12/06 03:45:54 [error] [exception.CException] exception 'CException' with message 'Property "Policy.payment_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('payment_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('payment_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Policy), 'payment_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Policy), 'payment_id', Array, Array)
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\_form.php(100): CActiveForm->dropDownList(Object(Policy), 'payment_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiamrts/index.php/policy/create
+---
+2013/12/06 03:49:19 [error] [exception.CException] exception 'CException' with message 'Property "Policy.assured_id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('assured_id')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('assured_id')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Policy), 'assured_id')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Policy), 'assured_id', Array, Array)
+#4 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\_form.php(72): CActiveForm->dropDownList(Object(Policy), 'assured_id', Array, Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#8 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\views\policy\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\Nikkie...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\Nikkie...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\Nikkie...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php(79): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PolicyController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/create')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiamrts/index.php/policy/create
+---
