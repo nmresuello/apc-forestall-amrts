@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2013 at 07:52 AM
+-- Generation Time: Dec 06, 2013 at 08:13 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -85,9 +85,9 @@ CREATE TABLE IF NOT EXISTS `claim` (
   `policy_id` int(11) NOT NULL,
   `lastname` varchar(45) DEFAULT NULL,
   `firstname` varchar(45) DEFAULT NULL,
-  `middlename` varchar(45) DEFAULT NULL,
-  `birthday` varchar(45) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
+  `description` text NOT NULL,
+  `type_of_accident` varchar(45) DEFAULT NULL,
+  `insured_items` text,
   PRIMARY KEY (`id`),
   KEY `fk_claim_policy1_idx` (`policy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
