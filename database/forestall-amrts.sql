@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2013 at 01:02 AM
--- Server version: 5.6.11
--- PHP Version: 5.5.1
+-- Generation Time: Dec 06, 2013 at 06:31 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -39,14 +39,29 @@ CREATE TABLE IF NOT EXISTS `assured` (
   `email_add` varchar(45) DEFAULT NULL,
   `contact_number` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `assured`
 --
 
 INSERT INTO `assured` (`id`, `client_lastname`, `client_firstname`, `client_middlename`, `gender`, `address`, `age`, `email_add`, `contact_number`) VALUES
-(2, 'Basco', 'Jelbert', 'N''', NULL, 'Pasay City', 19, 'jnbasco@apc.edu.ph', '09726989625');
+(2, 'Basco', 'Jelbert', 'N''', NULL, 'Pasay City', 19, 'jnbasco@apc.edu.ph', '09726989625'),
+(3, 'Cambay', 'Marion', 'Fami', NULL, '123 Las Pinas', 18, 'mcambay@apc.edu.ph', '09123456789');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attachment`
+--
+
+CREATE TABLE IF NOT EXISTS `attachment` (
+  `id` int(11) NOT NULL,
+  `policy_id` int(11) NOT NULL,
+  `filename` varchar(100) NOT NULL,
+  `attachments` blob NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
