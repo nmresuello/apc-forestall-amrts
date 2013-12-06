@@ -17,7 +17,7 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'policy_dateissued'); ?>
+		<?php echo $form->labelEx($model,'Date Issued'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
                     'attribute'=>'policy_dateissued',
@@ -45,13 +45,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'insurance_attachment_details'); ?>
+		<?php echo $form->labelEx($model,'Attachment Details'); ?>
 		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
 <div class="row">
-		<?php echo $form->labelEx($model,'policy_date_expiration'); ?>
+		<?php echo $form->labelEx($model,'Date Expiration'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
                     'attribute'=>'policy_date_expiration',
@@ -79,13 +79,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'insureditems'); ?>
+		<?php echo $form->labelEx($model,'Insured Items'); ?>
 		<?php echo $form->textField($model,'insureditems',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'insureditems'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'termprice'); ?>
+		<?php echo $form->labelEx($model,'Term Price'); ?>
 		<?php echo $form->textField($model,'termprice',array('size'=>6,'maxlength'=>6)); ?>
 		<?php echo $form->error($model,'termprice'); ?>
 	</div>
