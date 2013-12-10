@@ -16,12 +16,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->textField($model,'policy_id'); ?>
 		<?php echo $form->error($model,'policy_id'); ?>
@@ -29,14 +23,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'filename'); ?>
-		<?php echo $form->textField($model,'filename',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'filename',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'filename'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'attachments'); ?>
-		<?php echo $form->textField($model,'attachments'); ?>
-		<?php echo $form->error($model,'attachments'); ?>
+		<?php echo $form->labelEx($model,'attachment'); ?>
+		<?php echo $form->textField($model,'attachment'); ?>
+		<?php echo $form->error($model,'attachment'); ?>
 	</div>
 
 	<div class="row buttons">

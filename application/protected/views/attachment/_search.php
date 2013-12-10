@@ -23,12 +23,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'filename'); ?>
-		<?php echo $form->textField($model,'filename',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->textField($model,'filename',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'attachments'); ?>
-		<?php echo $form->textField($model,'attachments'); ?>
+		<?php echo $form->label($model,'attachment'); ?>
+		<?php echo $form->textField($model,'attachment'); ?>
 	</div>
 
 	<div class="row buttons">

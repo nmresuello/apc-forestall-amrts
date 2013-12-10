@@ -24,6 +24,6 @@ $this->menu=array(
 		'id',
 		'policy_id',
 		'filename',
-		'attachments',
+		'attachment',
 	),
 )); ?>

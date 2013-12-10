@@ -17,8 +17,8 @@
 	<?php echo CHtml::encode($data->filename); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('attachments')); ?>:</b>
-	<?php echo CHtml::encode($data->attachments); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('attachment')); ?>:</b>
+	<?php echo CHtml::encode($data->attachment); ?>
 	<br />
 
 

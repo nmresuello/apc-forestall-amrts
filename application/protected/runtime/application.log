@@ -4807,3 +4807,69 @@ HTTP_REFERER=http://localhost/marion/index.php/policy/admin
 2013/12/06 07:07:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.attachments' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `attachments`.
 in C:\xampp\htdocs\marion\index.php (13)
 >>>>>>> ba96e7de737ac56e7876d1a640d4422312420135
+2013/12/10 06:46:20 [warning] [application] Failed to set unsafe attribute "attachment" of "Policy".
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php (72)
+in C:\Users\student\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/10 06:46:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`insurance_company`, CONSTRAINT `fk_insurance company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `insurance_company` (`company_name`, `company_address`, `broker_id`, `policy_id`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\InsuranceCompanyController.php (73)
+in C:\Users\student\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/10 06:46:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`insurance_company`, CONSTRAINT `fk_insurance company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `insurance_company` (`company_name`, `company_address`, `broker_id`, `policy_id`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\InsuranceCompanyController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): InsuranceCompanyController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('insurancecompan...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\student\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/insurancecompany/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/insurancecompany/create
+---
+2013/12/10 07:01:41 [warning] [application] Failed to set unsafe attribute "attachment" of "Policy".
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php (72)
+in C:\Users\student\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/10 07:01:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.attachment' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `attachment`.
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\models\Attachment.php (21)
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\views\policy\view.php (37)
+in C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php (56)
+2013/12/10 07:01:42 [error] [exception.CDbException] exception 'CDbException' with message 'The table "attachment" for active record class "Attachment" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Attachment))
+#1 C:\Users\student\Documents\apc-forestall-amrts\application\protected\models\Attachment.php(21): CActiveRecord::model('Attachment')
+#2 C:\Users\student\Documents\apc-forestall-amrts\application\protected\views\policy\view.php(37): Attachment::model()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\Users\studen...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\studen...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\studen...', Array, true)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#7 C:\Users\student\Documents\apc-forestall-amrts\application\protected\controllers\PolicyController.php(56): CController->render('view', Array)
+#8 [internal function]: PolicyController->actionView('1')
+#9 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PolicyController), Array)
+#10 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PolicyController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('policy/view')
+#21 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\Users\student\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiamrts/index.php/policy/1
+HTTP_REFERER=http://localhost/yiiamrts/index.php/policy/create
+---
+2013/12/10 07:05:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forestall-amrts.attachmetn' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `attachmetn`.
+in C:\Users\student\Documents\apc-forestall-amrts\application\index.php (13)

@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $policy_id
  * @property string $filename
- * @property string $attachments
+ * @property string $attachment
  */
 class Attachment extends CActiveRecord
 {
@@ -37,12 +37,12 @@ class Attachment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, policy_id, filename, attachments', 'required'),
-			array('id, policy_id', 'numerical', 'integerOnly'=>true),
-			array('filename', 'length', 'max'=>100),
+			array('policy_id', 'numerical', 'integerOnly'=>true),
+			array('filename', 'length', 'max'=>45),
+			array('attachment', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, policy_id, filename, attachments', 'safe', 'on'=>'search'),
+			array('id, policy_id, filename, attachment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class Attachment extends CActiveRecord
 			'id' => 'ID',
 			'policy_id' => 'Policy',
 			'filename' => 'Filename',
-			'attachments' => 'Attachments',
+			'attachment' => 'Attachment',
 		);
 	}
 
@@ -84,7 +84,7 @@ class Attachment extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('policy_id',$this->policy_id);
 		$criteria->compare('filename',$this->filename,true);
-		$criteria->compare('attachments',$this->attachments,true);
+		$criteria->compare('attachment',$this->attachment,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
