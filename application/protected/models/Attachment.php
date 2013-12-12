@@ -38,8 +38,13 @@ class Attachment extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('policy_id', 'numerical', 'integerOnly'=>true),
-			array('filename', 'length', 'max'=>45),
-			array('attachment', 'safe'),
+			array('filename', 'length', 'max'=>100),
+			array('attachment', 'file', 
+					'types'=>'jpeg|jpg|gif|png',
+					'maxSize'=>1024 * 1024 * 1, // 1MB
+					'tooLarge'=>'The file was larger than 1MB. Please upload a smaller file.',
+					'allowEmpty'=>1,
+					),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, policy_id, filename, attachment', 'safe', 'on'=>'search'),

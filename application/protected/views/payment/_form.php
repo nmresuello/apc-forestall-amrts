@@ -17,7 +17,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'paymenttype'); ?>
-		<?php echo $form->textField($model,'paymenttype',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->dropDownList($model, 'paymenttype', CHtml::listData(
+            payment::model()->findAll(), 'id', 'amount'),
+            array('prompt' => 'Select an payment type'));?>
 		<?php echo $form->error($model,'paymenttype'); ?>
 	</div>
 
