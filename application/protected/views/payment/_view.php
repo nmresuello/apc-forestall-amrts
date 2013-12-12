@@ -26,7 +26,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('commission_id')); ?>:</b>
-	<?php echo CHtml::encode($data->commission_id); ?>
+	<?php echo CHtml::encode($data->amount); ?>
 	<br />
 
 

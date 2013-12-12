@@ -27,7 +27,8 @@
 		<?php echo $form->error($model,'company_address'); ?>
 	</div>
 
-	<?php echo $form->labelEx($model,'broker_id'); ?>
+		<div>
+<?php echo $form->labelEx($model,'broker_id'); ?>
 <?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
 Broker::model()->findAll(), 'id', 'broker_name'),
 array('prompt' => 'Select Broker')
@@ -35,13 +36,7 @@ array('prompt' => 'Select Broker')
 <?php echo $form->error($model,'broker_id'); ?>
 </div>
 
-	<?php echo $form->labelEx($model,'policy_id'); ?>
-<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-Policy::model()->findAll(), 'id', 'insurance_type'),
-array('prompt' => 'Select Policy')
-); ?>
-<?php echo $form->error($model,'policy_id'); ?>
-</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

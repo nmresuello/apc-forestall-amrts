@@ -22,11 +22,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'insurance_type'); ?>
-		<?php echo $form->textField($model,'insurance_type',array('size'=>45,'maxlength'=>45)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'insurance_attachment_details'); ?>
 		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
@@ -59,6 +54,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'assured_id'); ?>
 		<?php echo $form->textField($model,'assured_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'insurance_type_id'); ?>
+		<?php echo $form->textField($model,'insurance_type_id'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -62,8 +62,8 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'commission_id'); ?>
 		<?php echo $form->dropDownList($model, 'commission_id', CHtml::listData(
-            payment::model()->findAll(), 'id', 'amount'),
-            array('prompt' => 'Select an commission ID'));?>
+            commission::model()->findAll(), 'id', 'amount'),
+            array('prompt' => 'Select commission'));?>
 		<?php echo $form->error($model,'commission_id'); ?>
 	</div>
 

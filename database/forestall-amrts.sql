@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2013 at 07:06 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Dec 12, 2013 at 10:18 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `assured` (
 --
 
 INSERT INTO `assured` (`id`, `client_lastname`, `client_firstname`, `client_middlename`, `gender`, `address`, `age`, `email_add`, `contact_number`) VALUES
-(1, 'Basco', 'Jelbert', 'Nixon', 'M', 'Ilocos', 19, 'jnb04', '09123455');
+(1, 'Basco', 'Jelbert', 'Nixon', 'Male', 'Pasay City', 19, 'jnb04', '0923584964');
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `broker` (
 --
 
 INSERT INTO `broker` (`id`, `owner_firstname`, `owner_lastname`, `owner_middlename`, `employee_firstname`, `employee_middlename`, `employee_lastname`, `broker_address`, `broker_name`) VALUES
-(1, 'Jenny', 'Anastacio', 'Cambay', 'Chloe', 'Anne', 'Sanchez', 'Magallanes', 'APC');
+(1, 'Marion', 'Cambay', 'Yambao', 'Jenny', 'Anne', 'Anastacio', 'Magallanes', 'APC');
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `commission` (
 --
 
 INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
-(1, '1000', '', '2013-12-10', 1);
+(1, '1900', '200', '2013-12-12', 1);
 
 -- --------------------------------------------------------
 
@@ -141,17 +141,37 @@ CREATE TABLE IF NOT EXISTS `insurance_company` (
   `company_name` varchar(45) DEFAULT NULL,
   `company_address` varchar(45) DEFAULT NULL,
   `broker_id` int(11) NOT NULL,
-  `policy_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_insurance company_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `insurance_company`
 --
 
-INSERT INTO `insurance_company` (`id`, `company_name`, `company_address`, `broker_id`, `policy_id`) VALUES
-(2, 'Forestall', 'Paranaque', 1, 1);
+INSERT INTO `insurance_company` (`id`, `company_name`, `company_address`, `broker_id`) VALUES
+(1, 'Forestall', 'Paranaque', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `insurance_type`
+--
+
+CREATE TABLE IF NOT EXISTS `insurance_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `insurance_name` varchar(45) DEFAULT NULL,
+  `description` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `insurance_type`
+--
+
+INSERT INTO `insurance_type` (`id`, `insurance_name`, `description`) VALUES
+(1, 'Life', ''),
+(2, 'Health', '');
 
 -- --------------------------------------------------------
 
@@ -181,7 +201,6 @@ CREATE TABLE IF NOT EXISTS `payment` (
 CREATE TABLE IF NOT EXISTS `policy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `policy_dateissued` date DEFAULT NULL,
-  `insurance_type` varchar(45) DEFAULT NULL,
   `insurance_attachment_details` varchar(45) DEFAULT NULL,
   `policy_date_expiration` date DEFAULT NULL,
   `policy_coverage` varchar(45) DEFAULT NULL,
@@ -189,17 +208,20 @@ CREATE TABLE IF NOT EXISTS `policy` (
   `termprice` decimal(6,2) DEFAULT NULL,
   `insurance_company_id` int(11) NOT NULL,
   `assured_id` int(11) NOT NULL,
+  `insurance_type_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_policy_insurance company1_idx` (`insurance_company_id`),
-  KEY `fk_policy_assured1_idx` (`assured_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  KEY `fk_policy_assured1_idx` (`assured_id`),
+  KEY `fk_policy_insurance_type1_idx` (`insurance_type_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `policy`
 --
 
-INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_type`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`) VALUES
-(1, '2013-12-10', '', NULL, '2013-12-16', '', '', '0.00', 2, 1);
+INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`, `insurance_type_id`) VALUES
+(1, '2013-12-13', '', '2013-12-13', '', '', '0.00', 1, 1, 2),
+(2, '0000-00-00', '', '0000-00-00', '', 'House', '0.00', 1, 1, 2);
 
 --
 -- Constraints for dumped tables
@@ -221,7 +243,7 @@ ALTER TABLE `commission`
 -- Constraints for table `insurance_company`
 --
 ALTER TABLE `insurance_company`
-  ADD CONSTRAINT `fk_insurance company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_insurance?company_broker1` FOREIGN KEY (`broker_id`) REFERENCES `broker` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `payment`
@@ -234,8 +256,9 @@ ALTER TABLE `payment`
 -- Constraints for table `policy`
 --
 ALTER TABLE `policy`
+  ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_policy_assured1` FOREIGN KEY (`assured_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_policy_insurance company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_policy_insurance_type1` FOREIGN KEY (`insurance_type_id`) REFERENCES `insurance_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

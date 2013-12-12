@@ -1,24 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "insurance_company".
+ * This is the model class for table "insurance_type".
  *
- * The followings are the available columns in table 'insurance_company':
+ * The followings are the available columns in table 'insurance_type':
  * @property integer $id
- * @property string $company_name
- * @property string $company_address
- * @property integer $broker_id
+ * @property string $insurance_name
+ * @property string $description
  *
  * The followings are the available model relations:
- * @property Broker $broker
  * @property Policy[] $policies
  */
-class InsuranceCompany extends CActiveRecord
+class InsuranceType extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return InsuranceCompany the static model class
+	 * @return InsuranceType the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +28,7 @@ class InsuranceCompany extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'insurance_company';
+		return 'insurance_type';
 	}
 
 	/**
@@ -41,12 +39,11 @@ class InsuranceCompany extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('broker_id', 'required'),
-			array('broker_id', 'numerical', 'integerOnly'=>true),
-			array('company_name, company_address', 'length', 'max'=>45),
+			array('insurance_name', 'length', 'max'=>45),
+			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, company_name, company_address, broker_id', 'safe', 'on'=>'search'),
+			array('id, insurance_name, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,8 +55,7 @@ class InsuranceCompany extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'broker' => array(self::BELONGS_TO, 'Broker', 'broker_id'),
-			'policies' => array(self::HAS_MANY, 'Policy', 'insurance_company_id'),
+			'policies' => array(self::HAS_MANY, 'Policy', 'insurance_type_id'),
 		);
 	}
 
@@ -70,9 +66,8 @@ class InsuranceCompany extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'company_name' => 'Company Name',
-			'company_address' => 'Company Address',
-			'broker_id' => 'Broker',
+			'insurance_name' => 'Insurance Name',
+			'description' => 'Description',
 		);
 	}
 
@@ -88,9 +83,8 @@ class InsuranceCompany extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('company_name',$this->company_name,true);
-		$criteria->compare('company_address',$this->company_address,true);
-		$criteria->compare('broker_id',$this->broker_id);
+		$criteria->compare('insurance_name',$this->insurance_name,true);
+		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

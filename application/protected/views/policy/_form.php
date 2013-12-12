@@ -15,9 +15,8 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-
 	<div class="row">
-		<?php echo $form->labelEx($model,'Date Issued'); ?>
+		<?php echo $form->labelEx($model,'policy_dateissued'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
                     'attribute'=>'policy_dateissued',
@@ -37,21 +36,16 @@
                     ),
                         ));
                 ?>
-
+		<?php echo $form->error($model,'policy_dateissued'); ?>
+	</div>
 	<div class="row">
-		<?php echo $form->labelEx($model,'insurance_type'); ?>
-		<?php echo $form->textField($model,'insurance_type',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'insurance_type'); ?>
+		<?php echo $form->labelEx($model,'insurance_attachment_details'); ?>
+		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'Attachment Details'); ?>
-		<?php //echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
-		<?php //echo $form->error($model,'insurance_attachment_details'); ?>
-	</div>
-
-<div class="row">
-		<?php echo $form->labelEx($model,'Date Expiration'); ?>
+		<?php echo $form->labelEx($model,'policy_date_expiration'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
                     'model'=>$model,
                     'attribute'=>'policy_date_expiration',
@@ -71,6 +65,8 @@
                     ),
                         ));
                 ?>
+		<?php echo $form->error($model,'policy_date_expiration'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_coverage'); ?>
@@ -79,47 +75,43 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Insured Items'); ?>
+		<?php echo $form->labelEx($model,'insureditems'); ?>
 		<?php echo $form->textField($model,'insureditems',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'insureditems'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Term Price'); ?>
+		<?php echo $form->labelEx($model,'termprice'); ?>
 		<?php echo $form->textField($model,'termprice',array('size'=>6,'maxlength'=>6)); ?>
 		<?php echo $form->error($model,'termprice'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'insurance_company_id'); ?>
-		<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
-            insurancecompany::model()->findAll(), 'id', 'company_name'),
-            array('prompt' => 'Select Insurance Company')); ?>
-		<?php echo $form->error($model,'insurance_company_id'); ?>
-	</div>
+		<div>
+<?php echo $form->labelEx($model,'insurance_company_id'); ?>
+<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
+InsuranceCompany::model()->findAll(), 'id', 'company_name'),
+array('prompt' => 'Select Insurance Company')
+); ?>
+<?php echo $form->error($model,'insurance_company_id'); ?>
+</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'assured_id'); ?>
-		<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
-            assured::model()->findAll(), 'id', 'client_firstname'),
-            array('prompt' => 'Select Assured'));?>
-		<?php echo $form->error($model,'assured_id'); ?>
-	</div>
-	
-	
-	<div class="row">
-<?php echo $form->labelEx($model,'file'); ?>
-	<?php  $this->widget('CMultiFileUpload',array(
-		'model'=>$model,
-  	    'attribute' => 'attachment',
-	    'accept'=> 'jpeg|jpg|gif|png',
-		'denied'=>'Only jpeg,jpg,gif and png are allowed',
-       'max'=>7,
-       'remove'=>'[remove]',
-       'duplicate'=>'Already Selected',
-    ));?>
- </div>
-	
+		<div>
+<?php echo $form->labelEx($model,'assured_id'); ?>
+<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
+Assured::model()->findAll(), 'id', 'client_lastname'),
+array('prompt' => 'Select Assured')
+); ?>
+<?php echo $form->error($model,'assured_id'); ?>
+</div>
+
+		<div>
+<?php echo $form->labelEx($model,'insurance_type_id'); ?>
+<?php echo $form->dropDownList($model, 'insurance_type_id', CHtml::listData(
+InsuranceType::model()->findAll(), 'id', 'insurance_name'),
+array('prompt' => 'Select Insurance')
+); ?>
+<?php echo $form->error($model,'insurance_type_id'); ?>
+</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

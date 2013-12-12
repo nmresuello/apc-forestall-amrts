@@ -49,7 +49,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'company_name',
 		'company_address',
 		'broker_id',
-		'policy_id',
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -13,10 +13,6 @@
 	<?php echo CHtml::encode($data->policy_dateissued); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_type')); ?>:</b>
-	<?php echo CHtml::encode($data->insurance_type); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_attachment_details')); ?>:</b>
 	<?php echo CHtml::encode($data->insurance_attachment_details); ?>
 	<br />
@@ -33,19 +29,23 @@
 	<?php echo CHtml::encode($data->insureditems); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('termprice')); ?>:</b>
 	<?php echo CHtml::encode($data->termprice); ?>
 	<br />
 
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_company_id')); ?>:</b>
-	<?php echo CHtml::encode($data->insurance_company_id); ?>
+	<?php echo CHtml::encode($data->insuranceCompany->company_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('assured_id')); ?>:</b>
-	<?php echo CHtml::encode($data->assured_id); ?>
+	<?php echo CHtml::encode($data->assured->client_lastname); ?>
 	<br />
 
-	*/ ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_type_id')); ?>:</b>
+	<?php echo CHtml::encode($data->insuranceType->insurance_name); ?>
+	<br />
+
+	 
 
 </div>
