@@ -17,12 +17,12 @@
 	<?php echo CHtml::encode($data->company_address); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('broker_id')); ?>:</b>
-	<?php echo CHtml::encode($data->broker_id); ?>
+		<b><?php echo CHtml::encode($data->getAttributeLabel('broker_id')); ?>:</b>
+	<?php echo CHtml::encode($data->broker->broker_name); ?>
 	<br />
-
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy->insurance_type); ?>
+	<?php echo CHtml::encode($data->policy_id); ?>
 	<br />
 
 
