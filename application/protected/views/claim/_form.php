@@ -15,10 +15,10 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<d<div class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-            claim::model()->findAll(), 'id', 'insurance_type'),
+            claim::model()->findAll(), 'id', 'insureditems'),
             array('prompt' => 'Select Policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>
