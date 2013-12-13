@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "Claim".
+ * This is the model class for table "claim".
  *
- * The followings are the available columns in table 'Claim':
+ * The followings are the available columns in table 'claim':
  * @property integer $id
  * @property integer $policy_id
  * @property string $lastname
@@ -33,7 +33,7 @@ class Claim extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'Claim';
+		return 'claim';
 	}
 
 	/**

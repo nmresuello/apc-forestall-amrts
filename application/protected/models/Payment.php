@@ -10,10 +10,11 @@
  * @property string $receipt
  * @property string $paymentamount
  * @property integer $commission_id
+ * @property integer $policy_id
  *
  * The followings are the available model relations:
  * @property Commission $commission
- * @property Policy[] $policies
+ * @property Policy $policy
  */
 class Payment extends CActiveRecord
 {
@@ -43,14 +44,14 @@ class Payment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('commission_id', 'required'),
-			array('commission_id', 'numerical', 'integerOnly'=>true),
+			array('commission_id, policy_id', 'required'),
+			array('commission_id, policy_id', 'numerical', 'integerOnly'=>true),
 			array('paymenttype, receipt', 'length', 'max'=>45),
 			array('paymentamount', 'length', 'max'=>6),
 			array('date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, paymenttype, date, receipt, paymentamount, commission_id', 'safe', 'on'=>'search'),
+			array('id, paymenttype, date, receipt, paymentamount, commission_id, policy_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +64,7 @@ class Payment extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'commission' => array(self::BELONGS_TO, 'Commission', 'commission_id'),
-			'policies' => array(self::HAS_MANY, 'Policy', 'payment_id'),
+			'policy' => array(self::BELONGS_TO, 'Policy', 'policy_id'),
 		);
 	}
 
@@ -79,6 +80,7 @@ class Payment extends CActiveRecord
 			'receipt' => 'Receipt',
 			'paymentamount' => 'Paymentamount',
 			'commission_id' => 'Commission',
+			'policy_id' => 'Policy',
 		);
 	}
 
@@ -99,6 +101,7 @@ class Payment extends CActiveRecord
 		$criteria->compare('receipt',$this->receipt,true);
 		$criteria->compare('paymentamount',$this->paymentamount,true);
 		$criteria->compare('commission_id',$this->commission_id);
+		$criteria->compare('policy_id',$this->policy_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

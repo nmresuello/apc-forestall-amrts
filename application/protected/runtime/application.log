@@ -5589,3 +5589,215 @@ Stack trace:
 REQUEST_URI=/yiiamrts/index.php/Policy
 HTTP_REFERER=http://localhost/yiiamrts/index.php/commission/create
 ---
+2013/12/13 01:03:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:03:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 01:04:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:04:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 01:05:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:05:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 01:06:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:06:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 01:13:12 [warning] [application] Failed to set unsafe attribute "policy_id" of "Payment".
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (72)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:13:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:13:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 01:14:02 [warning] [application] Failed to set unsafe attribute "policy_id" of "Payment".
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (72)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:14:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 01:14:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 06:33:34 [warning] [application] Failed to set unsafe attribute "policy_id" of "Payment".
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (72)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 06:33:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 06:33:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
+2013/12/13 09:31:52 [warning] [application] Failed to set unsafe attribute "policy_id" of "Payment".
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (72)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 09:31:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php (73)
+in C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php (13)
+2013/12/13 09:31:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`forestall-amrts`.`payment`, CONSTRAINT `fk_payment_policy1` FOREIGN KEY (`policy_id`) REFERENCES `policy` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `payment` (`paymenttype`, `date`, `receipt`, `paymentamount`, `commission_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\protected\controllers\PaymentController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): PaymentController->actionCreate()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('payment/create')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\Users\Nikkie\Documents\apc-forestall-amrts\application\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiamrts/index.php/payment/create
+HTTP_REFERER=http://localhost/yiiamrts/index.php/payment/create
+---
