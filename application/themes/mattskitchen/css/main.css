@@ -55,15 +55,15 @@ input[type="password"]:focus {
  */
 #header
 {
-  background: #2d2d2d url(../img/header_bg_tail.gif) repeat-x;
+  background: #2d2d2d url(../img/header_bg_tail.gif);
   color: #fff;
   font-family: "Candara", Arial, Helvetica, sans-serif;
-  height: 84px;
-  line-height: 84px;
+  height: 150px;
+  line-height: 75px;
 	margin: 0;
   overflow: hidden;
 	padding: 0;
-  position: relative;
+  position: inherit;
 }
 
 #logo
@@ -71,7 +71,7 @@ input[type="password"]:focus {
   float: left;
 	font-size: 3em;
   margin: 0 1em;
-  width: 360px;
+  width: 1000px;
 }
 #logo a
 {
