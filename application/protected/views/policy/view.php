@@ -32,4 +32,12 @@ $this->menu=array(
 		'assured_id',
 		'insurance_type_id',
 	),
-)); ?>
+));
+	
+		$sql = Attachment::model()->findAll('policy_id='.$model->id);
+		foreach ($sql as $a) {
+		echo "<img src='".Yii::app()->baseUrl."/uploads/".$a->filename."' width='50' height='50'/><br/>";
+		}
+	
+	
+	 ?>

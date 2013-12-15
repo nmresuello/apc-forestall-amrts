@@ -35,7 +35,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Gender'); ?>
-		<?php echo $form->textField($model,'gender',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo "<select name='gender'> <option value='Male'>M</option> <option value='Female'>F</option> </select>";?>
 		<?php echo $form->error($model,'gender'); ?>
 	</div>
 

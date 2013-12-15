@@ -39,9 +39,9 @@
 		<?php echo $form->error($model,'policy_dateissued'); ?>
 	</div>
 	<div class="row">
-		<?php echo $form->labelEx($model,'insurance_attachment_details'); ?>
-		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'insurance_attachment_details'); ?>
+		<?php  echo $form->labelEx($model,'insurance_attachment_details'); ?>
+		<?php  echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
+		<?php  echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
 
 	<div class="row">
@@ -86,37 +86,50 @@
 		<?php echo $form->error($model,'termprice'); ?>
 	</div>
 
-		<div>
-<?php echo $form->labelEx($model,'insurance_company_id'); ?>
-<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
-InsuranceCompany::model()->findAll(), 'id', 'company_name'),
-array('prompt' => 'Select Insurance Company')
-); ?>
-<?php echo $form->error($model,'insurance_company_id'); ?>
-</div>
+	<div>
+		<?php echo $form->labelEx($model,'insurance_company_id'); ?>
+		<?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
+		InsuranceCompany::model()->findAll(), 'id', 'company_name'),
+		array('prompt' => 'Select Insurance Company')
+		); ?>
+		<?php echo $form->error($model,'insurance_company_id'); ?>
+	</div>
 
-		<div>
-<?php echo $form->labelEx($model,'assured_id'); ?>
-<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
-Assured::model()->findAll(), 'id', 'client_lastname'),
-array('prompt' => 'Select Assured')
-); ?>
-<?php echo $form->error($model,'assured_id'); ?>
-</div>
+	<div>
+		<?php echo $form->labelEx($model,'assured_id'); ?>
+		<?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
+		Assured::model()->findAll(), 'id', 'client_lastname'),
+		array('prompt' => 'Select Assured')
+		); ?>
+		<?php echo $form->error($model,'assured_id'); ?>
+	</div>
 
-		<div>
-<?php echo $form->labelEx($model,'insurance_type_id'); ?>
-<?php echo $form->dropDownList($model, 'insurance_type_id', CHtml::listData(
-InsuranceType::model()->findAll(), 'id', 'insurance_name'),
-array('prompt' => 'Select Insurance')
-); ?>
-<?php echo $form->error($model,'insurance_type_id'); ?>
-</div>
+	<div>
+		<?php echo $form->labelEx($model,'insurance_type_id'); ?>
+		<?php echo $form->dropDownList($model, 'insurance_type_id', CHtml::listData(
+		InsuranceType::model()->findAll(), 'id', 'insurance_name'),
+		array('prompt' => 'Select Insurance')
+		); ?>
+		<?php echo $form->error($model,'insurance_type_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'file'); ?>
+		<?php  $this->widget('CMultiFileUpload',array(
+			'model'=>$model,
+	  	    'attribute' => 'attachment',
+		    'accept'=> 'jpeg|jpg|gif|png',
+			'denied'=>'Only jpeg,jpg,gif and png are allowed',
+	       'max'=>7,
+	       'remove'=>'[remove]',
+	       'duplicate'=>'Already Selected',
+	    ));?>
+	 </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
-<?php $this->endWidget(); ?>
+	<?php $this->endWidget(); ?>
 
 </div><!-- form -->
