@@ -31,6 +31,11 @@
 		<?php echo $form->textField($model,'broker_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'policy_id'); ?>
+		<?php echo $form->textField($model,'policy_id'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

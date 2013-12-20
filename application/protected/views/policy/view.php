@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'policy_dateissued',
+		'insurance_type',
 		'insurance_attachment_details',
 		'policy_date_expiration',
 		'policy_coverage',
@@ -30,14 +31,13 @@ $this->menu=array(
 		'termprice',
 		'insurance_company_id',
 		'assured_id',
-		'insurance_type_id',
 	),
 ));
-	
-		$sql = Attachment::model()->findAll('policy_id='.$model->id);
-		foreach ($sql as $a) {
-		echo "<img src='".Yii::app()->baseUrl."/uploads/".$a->filename."' width='50' height='50'/><br/>";
-		}
-	
-	
-	 ?>
+
+	$sql = Attachment::model()->findAll('policy_id='.$model->id);
+	foreach ($sql as $a) {
+	echo "<img src='".Yii::app()->baseUrl."/uploads/".$a->filename."' width='50' height='50'/><br/>";
+	}
+
+
+ ?>

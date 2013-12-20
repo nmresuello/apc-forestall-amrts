@@ -26,11 +26,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('commission_id')); ?>:</b>
-	<?php echo CHtml::encode($data->commission->amount); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy->policy_coverage); ?>
+	<?php echo CHtml::encode($data->commission_id); ?>
 	<br />
 
 

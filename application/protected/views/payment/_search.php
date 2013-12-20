@@ -41,11 +41,6 @@
 		<?php echo $form->textField($model,'commission_id'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'policy_id'); ?>
-		<?php echo $form->textField($model,'policy_id'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

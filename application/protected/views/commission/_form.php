@@ -20,6 +20,23 @@
 		<?php echo $form->textField($model,'amount',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'amount'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'file'); ?>
+		<?php  $this->widget('CMultiFileUpload',array(
+			'model'=>$model,
+	  	    'attribute' => 'attachment',
+		    'accept'=> 'jpeg|jpg|gif|png',
+			'denied'=>'Only jpeg,jpg,gif and png are allowed',
+	       'max'=>7,
+	       'remove'=>'[remove]',
+	       'duplicate'=>'Already Selected',
+	    ));?>
+	 </div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Save'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'receipt'); ?>
@@ -52,13 +69,13 @@
 	</div>
 
 	<div>
-<?php echo $form->labelEx($model,'broker_id'); ?>
-<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
-Broker::model()->findAll(), 'id', 'broker_name'),
-array('prompt' => 'Select Broker')
-); ?>
-<?php echo $form->error($model,'broker_id'); ?>
-</div>
+		<?php echo $form->labelEx($model,'broker_id'); ?>
+		<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
+		Broker::model()->findAll(), 'id', 'broker_name'),
+		array('prompt' => 'Select Broker')
+		); ?>
+		<?php echo $form->error($model,'broker_id'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -67,3 +84,5 @@ array('prompt' => 'Select Broker')
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+

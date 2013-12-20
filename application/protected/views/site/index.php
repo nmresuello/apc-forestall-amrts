@@ -9,7 +9,7 @@ Yii::app()->clientScript->registerCoreScript('jquery');
   array(
     'imageBlockSelector' => '#myslider', //the jquery selector
     'widthSlider' => '900', //or you can use jquery '$(window).width()/1.6',
-    'heightSlider' => '500', //or you can use jquery '$(window).height()/1.6',
+    'heightSlider' => '275', //or you can use jquery '$(window).height()/1.6',
     'slideUnitSize' => 'px', //px or %
     'timeBetweenChangeSlider' => 4000, //the time between displayed sliders in miliseconds
     'timeDelayAnimation' => 1000, //the time before slider starts in miliseconds

@@ -27,6 +27,5 @@ $this->menu=array(
 		'receipt',
 		'paymentamount',
 		'commission_id',
-		'policy_id',
 	),
 )); ?>
