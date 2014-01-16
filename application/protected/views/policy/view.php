@@ -31,5 +31,9 @@ $this->menu=array(
 		'insurance_company_id',
 		'assured_id',
 		'insurance_type_id',
+		'attachment'
 	),
 )); ?>
+
+<img src="/Cambay/uploads/<?= $model->attachment ?>" alt="Attachment Image" height=100 width=100 />
+

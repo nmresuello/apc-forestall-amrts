@@ -25,6 +25,5 @@ $this->menu=array(
 		'company_name',
 		'company_address',
 		'broker_id',
-		'policy_id',
 	),
 )); ?>

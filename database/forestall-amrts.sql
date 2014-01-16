@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2013 at 10:18 AM
--- Server version: 5.6.11
--- PHP Version: 5.5.1
+-- Generation Time: Jan 16, 2014 at 08:43 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `attachment` (
   `policy_id` int(11) DEFAULT NULL,
   `filename` varchar(45) DEFAULT NULL,
   `attachment` blob,
+  `filetype` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -121,14 +122,15 @@ CREATE TABLE IF NOT EXISTS `commission` (
   `broker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_commission_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `commission`
 --
 
 INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
-(1, '1900', '200', '2013-12-12', 1);
+(1, '1900', '200', '2013-12-12', 1),
+(2, '', '', '0000-00-00', 1);
 
 -- --------------------------------------------------------
 
@@ -209,19 +211,37 @@ CREATE TABLE IF NOT EXISTS `policy` (
   `insurance_company_id` int(11) NOT NULL,
   `assured_id` int(11) NOT NULL,
   `insurance_type_id` int(11) NOT NULL,
+  `attachment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_policy_insurance company1_idx` (`insurance_company_id`),
   KEY `fk_policy_assured1_idx` (`assured_id`),
   KEY `fk_policy_insurance_type1_idx` (`insurance_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `policy`
 --
 
-INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`, `insurance_type_id`) VALUES
-(1, '2013-12-13', '', '2013-12-13', '', '', '0.00', 1, 1, 2),
-(2, '0000-00-00', '', '0000-00-00', '', 'House', '0.00', 1, 1, 2);
+INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`, `insurance_type_id`, `attachment`) VALUES
+(1, '2013-12-13', '', '2013-12-13', '', '', '0.00', 1, 1, 2, ''),
+(2, '0000-00-00', '', '0000-00-00', '', 'House', '0.00', 1, 1, 2, ''),
+(3, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(4, '2014-01-01', 'Test', '2014-01-02', 'Test', 'Test', '9999.99', 1, 1, 2, ''),
+(5, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(6, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(7, '2014-01-01', 'Test', '2014-01-02', 'Test', 'Test', '9999.99', 1, 1, 1, ''),
+(8, '2014-01-09', 'Test2', '2014-01-10', 'Test2', 'Test2', '9999.99', 1, 1, 1, ''),
+(9, '2014-01-01', '', '2014-01-02', '', '', '0.00', 1, 1, 2, ''),
+(10, '2014-01-15', '', '2014-01-09', '', '', '0.00', 1, 1, 1, ''),
+(11, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 2, ''),
+(12, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(13, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(14, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
+(15, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, NULL),
+(16, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, NULL),
+(17, '0000-00-00', 'Drum roll please', '0000-00-00', '', '', '0.00', 1, 1, 2, NULL),
+(18, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 2, NULL),
+(19, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, '2014011683328.jpg');
 
 --
 -- Constraints for dumped tables
@@ -256,8 +276,8 @@ ALTER TABLE `payment`
 -- Constraints for table `policy`
 --
 ALTER TABLE `policy`
-  ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_policy_assured1` FOREIGN KEY (`assured_id`) REFERENCES `assured` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_policy_insurance?company1` FOREIGN KEY (`insurance_company_id`) REFERENCES `insurance_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_policy_insurance_type1` FOREIGN KEY (`insurance_type_id`) REFERENCES `insurance_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -14,12 +14,13 @@
  * @property integer $insurance_company_id
  * @property integer $assured_id
  * @property integer $insurance_type_id
+ * @property string $attachment
  *
  * The followings are the available model relations:
  * @property Claim[] $claims
  * @property Payment[] $payments
- * @property InsuranceCompany $insuranceCompany
  * @property Assured $assured
+ * @property InsuranceCompany $insuranceCompany
  * @property InsuranceType $insuranceType
  */
 class Policy extends CActiveRecord
@@ -54,10 +55,11 @@ class Policy extends CActiveRecord
 			array('insurance_company_id, assured_id, insurance_type_id', 'numerical', 'integerOnly'=>true),
 			array('insurance_attachment_details, policy_coverage, insureditems', 'length', 'max'=>45),
 			array('termprice', 'length', 'max'=>6),
+			array('attachment', 'length', 'max'=>255),
 			array('policy_dateissued, policy_date_expiration', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, policy_dateissued, insurance_attachment_details, policy_date_expiration, policy_coverage, insureditems, termprice, insurance_company_id, assured_id, insurance_type_id', 'safe', 'on'=>'search'),
+			array('id, policy_dateissued, insurance_attachment_details, policy_date_expiration, policy_coverage, insureditems, termprice, insurance_company_id, assured_id, insurance_type_id, attachment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,8 +73,8 @@ class Policy extends CActiveRecord
 		return array(
 			'claims' => array(self::HAS_MANY, 'Claim', 'policy_id'),
 			'payments' => array(self::HAS_MANY, 'Payment', 'policy_id'),
-			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
 			'assured' => array(self::BELONGS_TO, 'Assured', 'assured_id'),
+			'insuranceCompany' => array(self::BELONGS_TO, 'InsuranceCompany', 'insurance_company_id'),
 			'insuranceType' => array(self::BELONGS_TO, 'InsuranceType', 'insurance_type_id'),
 		);
 	}
@@ -93,6 +95,7 @@ class Policy extends CActiveRecord
 			'insurance_company_id' => 'Insurance Company',
 			'assured_id' => 'Assured',
 			'insurance_type_id' => 'Insurance Type',
+			'attachment' => 'Attachment',
 		);
 	}
 
@@ -117,6 +120,7 @@ class Policy extends CActiveRecord
 		$criteria->compare('insurance_company_id',$this->insurance_company_id);
 		$criteria->compare('assured_id',$this->assured_id);
 		$criteria->compare('insurance_type_id',$this->insurance_type_id);
+		$criteria->compare('attachment',$this->attachment,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

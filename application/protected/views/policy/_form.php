@@ -4,11 +4,13 @@
 /* @var $form CActiveForm */
 ?>
 
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'policy-form',
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array( 'enctype' => 'multipart/form-data' ),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -112,7 +114,9 @@
 	<hr>
 	<div class="row">
 <?php echo $form->labelEx($model,'File Upload'); ?>
-	<?php  $this->widget('CMultiFileUpload',array(
+<input type="file" name="Policy[attachment]" />
+	<!-- 
+		<?php  $this->widget('CMultiFileUpload',array(
 		'model'=>$model,
   	    'attribute' => 'attachment',
 	    'accept'=> 'jpeg|jpg|gif|png',
@@ -121,6 +125,7 @@
        'remove'=>'[remove]',
        'duplicate'=>'Already Selected',
     ));?>
+	-->
  </div>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
