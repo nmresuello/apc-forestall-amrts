@@ -70,12 +70,6 @@ class PolicyController extends Controller
 		
 		if(isset($_POST['Policy']))
 		{
-			//Teka, kausap ko boss ko
-			//Okay. :) Nga pala yung sa destination, kasi ililipat yan sa server. paano yun change lang?
-			// Yeahp
-			// okay :)
-			
-		
 			$attachment = array();
 		
 			if(!empty($_FILES)){
@@ -88,7 +82,6 @@ class PolicyController extends Controller
 				$attachment['size'] = $_FILES['Policy']['size']['attachment'];
 				
 				// get the current time so that there will be no overlap on the file names
-				// looks like there's an issue with strtotime with windows machines
 				$now = date('YmdGis');
 				
 				// split the file name to nitpick the extension
@@ -115,16 +108,8 @@ class PolicyController extends Controller
 				// usual cases : wrong permissions and or the folder does not exist
 				//  Not sure if the error throwing is right so, pakiayos na lang
 				if(!move_uploaded_file($attachment['tmp'],$destination )){
-					error('Something went wrong');
+					error('Something went wrong.');
 				}
-				
-				
-				//echo '<pre>' . print_r($attachment, true) . '</pre>';
-				//echo '<pre>' . print_r($destination, true) . '</pre>';
-				//echo '<pre>' . print_r($now, true) . '</pre>';
-				//echo '<pre>' . print_r(date('Y-m-d G:i:s a'), true) . '</pre>';
-				
-				//exit;
 			}
 		
 			$model->attributes=$_POST['Policy'];
