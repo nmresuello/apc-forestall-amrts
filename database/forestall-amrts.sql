@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2014 at 08:43 AM
+-- Generation Time: Jan 16, 2014 at 10:17 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -39,14 +39,7 @@ CREATE TABLE IF NOT EXISTS `assured` (
   `email_add` varchar(45) DEFAULT NULL,
   `contact_number` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `assured`
---
-
-INSERT INTO `assured` (`id`, `client_lastname`, `client_firstname`, `client_middlename`, `gender`, `address`, `age`, `email_add`, `contact_number`) VALUES
-(1, 'Basco', 'Jelbert', 'Nixon', 'Male', 'Pasay City', 19, 'jnb04', '0923584964');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -122,15 +115,14 @@ CREATE TABLE IF NOT EXISTS `commission` (
   `broker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_commission_broker1_idx` (`broker_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `commission`
 --
 
 INSERT INTO `commission` (`id`, `amount`, `receipt`, `date`, `broker_id`) VALUES
-(1, '1900', '200', '2013-12-12', 1),
-(2, '', '', '0000-00-00', 1);
+(1, '1900', '200', '2013-12-12', 1);
 
 -- --------------------------------------------------------
 
@@ -216,32 +208,7 @@ CREATE TABLE IF NOT EXISTS `policy` (
   KEY `fk_policy_insurance company1_idx` (`insurance_company_id`),
   KEY `fk_policy_assured1_idx` (`assured_id`),
   KEY `fk_policy_insurance_type1_idx` (`insurance_type_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
-
---
--- Dumping data for table `policy`
---
-
-INSERT INTO `policy` (`id`, `policy_dateissued`, `insurance_attachment_details`, `policy_date_expiration`, `policy_coverage`, `insureditems`, `termprice`, `insurance_company_id`, `assured_id`, `insurance_type_id`, `attachment`) VALUES
-(1, '2013-12-13', '', '2013-12-13', '', '', '0.00', 1, 1, 2, ''),
-(2, '0000-00-00', '', '0000-00-00', '', 'House', '0.00', 1, 1, 2, ''),
-(3, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(4, '2014-01-01', 'Test', '2014-01-02', 'Test', 'Test', '9999.99', 1, 1, 2, ''),
-(5, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(6, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(7, '2014-01-01', 'Test', '2014-01-02', 'Test', 'Test', '9999.99', 1, 1, 1, ''),
-(8, '2014-01-09', 'Test2', '2014-01-10', 'Test2', 'Test2', '9999.99', 1, 1, 1, ''),
-(9, '2014-01-01', '', '2014-01-02', '', '', '0.00', 1, 1, 2, ''),
-(10, '2014-01-15', '', '2014-01-09', '', '', '0.00', 1, 1, 1, ''),
-(11, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 2, ''),
-(12, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(13, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(14, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, ''),
-(15, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, NULL),
-(16, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, NULL),
-(17, '0000-00-00', 'Drum roll please', '0000-00-00', '', '', '0.00', 1, 1, 2, NULL),
-(18, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 2, NULL),
-(19, '0000-00-00', '', '0000-00-00', '', '', '0.00', 1, 1, 1, '2014011683328.jpg');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Constraints for dumped tables
