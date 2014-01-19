@@ -40,13 +40,15 @@
                 ?>
 
 	</div>
-
+	
+	<!-- 
 	<div class="row">
 		<?php echo $form->labelEx($model,'insurance_attachment_details'); ?>
 		<?php echo $form->textField($model,'insurance_attachment_details',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'insurance_attachment_details'); ?>
 	</div>
-
+	-->
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'Policy Date Expiration'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
