@@ -24,6 +24,31 @@ class Assured extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Assured the static model class
 	 */
+	 
+	    public function getNames()
+        {
+                        return $this->lname.', '. $this->fname.' '. $this->mname;
+        }
+
+        const s='Single';
+        const w='Widowed';
+        const m='Merried';
+        const se='Separated';
+        const a='Annulled';
+
+        const fe='Female';
+        const ma='Male';
+	  
+        
+        public function getGenderOptions()
+        {
+                return array(
+                        self::ma=>'Male',
+                        self::fe=>'Female',
+                );
+        }
+        
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

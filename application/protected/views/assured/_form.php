@@ -35,7 +35,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'gender'); ?>
-		<?php echo $form->textField($model,'gender',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->dropDownList($model,'gender', $model->getGenderOptions()); ?>
+                <?php //echo $form->textField($model,'gender',array('size'=>6,'maxlength'=>6)); ?>
 		<?php echo $form->error($model,'gender'); ?>
 	</div>
 
