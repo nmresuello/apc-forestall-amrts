@@ -20,23 +20,6 @@
 		<?php echo $form->textField($model,'amount',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'amount'); ?>
 	</div>
-	
-	<div class="row">
-		<?php echo $form->labelEx($model,'file'); ?>
-		<?php  $this->widget('CMultiFileUpload',array(
-			'model'=>$model,
-	  	    'attribute' => 'attachment',
-		    'accept'=> 'jpeg|jpg|gif|png',
-			'denied'=>'Only jpeg,jpg,gif and png are allowed',
-	       'max'=>7,
-	       'remove'=>'[remove]',
-	       'duplicate'=>'Already Selected',
-	    ));?>
-	 </div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Save'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'receipt'); ?>
