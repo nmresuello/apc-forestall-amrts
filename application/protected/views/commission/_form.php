@@ -20,7 +20,7 @@
 		<?php echo $form->textField($model,'amount',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'amount'); ?>
 	</div>
-	
+	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'file'); ?>
 		<?php  $this->widget('CMultiFileUpload',array(
@@ -37,7 +37,7 @@
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Save'); ?>
 	</div>
-
+	-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'receipt'); ?>
 		<?php echo $form->textField($model,'receipt',array('size'=>45,'maxlength'=>45)); ?>

@@ -33,9 +33,9 @@
 	<?php echo CHtml::encode($data->termprice); ?>
 	<br />
 
-	<?php /*
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_company_id')); ?>:</b>
-	<?php echo CHtml::encode($data->insurance_company_id); ?>
+	<?php echo CHtml::encode($data->insuranceCompany->company_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('assured_id')); ?>:</b>
@@ -46,6 +46,6 @@
 	<?php echo CHtml::encode($data->insurance_type_id); ?>
 	<br />
 
-	*/ ?>
+	
 
 </div>
