@@ -39,11 +39,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('assured_id')); ?>:</b>
-	<?php echo CHtml::encode($data->assured_id); ?>
+	<?php echo CHtml::encode($data->assured->client_lastname); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('insurance_type_id')); ?>:</b>
-	<?php echo CHtml::encode($data->insurance_type_id); ?>
+	<?php echo CHtml::encode($data->insuranceType->insurance_name); ?>
 	<br />
 
 	

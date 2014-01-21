@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
-	<?php echo CHtml::encode($data->policy_id); ?>
+	<?php echo CHtml::encode($data->policy->policy_dateissued); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('lastname')); ?>:</b>
