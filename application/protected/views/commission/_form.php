@@ -20,6 +20,7 @@
 		<?php echo $form->textField($model,'amount',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'amount'); ?>
 	</div>
+<<<<<<< HEAD
 	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'file'); ?>
@@ -38,6 +39,9 @@
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Save'); ?>
 	</div>
 	-->
+=======
+
+>>>>>>> 4d76bba2d15b6e3c638d846a1d8c404c31ec0045
 	<div class="row">
 		<?php echo $form->labelEx($model,'receipt'); ?>
 		<?php echo $form->textField($model,'receipt',array('size'=>45,'maxlength'=>45)); ?>
