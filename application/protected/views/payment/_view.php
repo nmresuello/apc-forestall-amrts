@@ -29,11 +29,10 @@
 	<?php echo CHtml::encode($data->commission->amount); ?>
 	<br />
 	
-	<div class="row">
-		<?php echo $form->labelEx($model,'policy_coverage'); ?>
-		<?php echo $form->textField($model,'policy_coverage',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'policy_coverage'); ?>
-	</div>
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('policy_id')); ?>:</b>
+	<?php echo CHtml::encode($data->policy->policy_dateissued); ?>
+	<br />
 
 
 </div>

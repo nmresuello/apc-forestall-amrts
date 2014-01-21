@@ -64,6 +64,14 @@
             array('prompt' => 'Select an commission ID'));?>
 		<?php echo $form->error($model,'commission_id'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'policy_id'); ?>
+		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
+            policy::model()->findAll(), 'id', 'policy_dateissued'),
+            array('prompt' => 'Select Policy'));?>
+		<?php echo $form->error($model,'policy_id'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

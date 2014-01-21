@@ -15,7 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<d<div class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
             policy::model()->findAll(), 'id', 'policy_dateissued'),
