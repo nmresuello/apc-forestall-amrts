@@ -18,7 +18,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'policy_id'); ?>
 		<?php echo $form->dropDownList($model, 'policy_id', CHtml::listData(
-            policy::model()->findAll(), 'id', 'policy_dateissued'),
+            Policy::model()->findAll(), 'id', 'policy_dateissued'),
             array('prompt' => 'Select Policy'));?>
 		<?php echo $form->error($model,'policy_id'); ?>
 	</div>

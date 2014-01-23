@@ -91,7 +91,7 @@
         <div class="row">
                 <?php echo $form->labelEx($model,'insurance_company_id'); ?>
                 <?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
-            insuranceCompany::model()->findAll(), 'id', 'company_name'),
+            InsuranceCompany::model()->findAll(), 'id', 'company_name'),
             array('prompt' => 'Select Insurance Company')); ?>
                 <?php echo $form->error($model,'insurance_company_id'); ?>
         </div>
@@ -99,7 +99,7 @@
         <div class="row">
                 <?php echo $form->labelEx($model,'assured_id'); ?>
                 <?php echo $form->dropDownList($model, 'assured_id', CHtml::listData(
-            assured::model()->findAll(), 'id', 'client_firstname'),
+            Assured::model()->findAll(), 'id', 'client_firstname'),
             array('prompt' => 'Select Assured'));?>
                 <?php echo $form->error($model,'assured_id'); ?>
         </div>
@@ -107,7 +107,7 @@
         <div class="row">
         <?php echo $form->labelEx($model,'insurance_type_id'); ?>
                 <?php echo $form->dropDownList($model, 'insurance_type_id', CHtml::listData(
-            insurancetype::model()->findAll(), 'id', 'insurance_name'),
+            InsuranceType::model()->findAll(), 'id', 'insurance_name'),
             array('prompt' => 'Select Insurance'));?>
                 <?php echo $form->error($model,'insurance_type_id'); ?>
         </div>
