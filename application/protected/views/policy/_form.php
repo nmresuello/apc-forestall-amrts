@@ -91,7 +91,7 @@
         <div class="row">
                 <?php echo $form->labelEx($model,'insurance_company_id'); ?>
                 <?php echo $form->dropDownList($model, 'insurance_company_id', CHtml::listData(
-            insurancecompany::model()->findAll(), 'id', 'company_name'),
+            insuranceCompany::model()->findAll(), 'id', 'company_name'),
             array('prompt' => 'Select Insurance Company')); ?>
                 <?php echo $form->error($model,'insurance_company_id'); ?>
         </div>
