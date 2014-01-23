@@ -69,6 +69,42 @@ class PolicyController extends Controller
 
 		if(isset($_POST['Policy']))
 		{
+			$attachment = array();
+			
+			if(!empty($_FILES)){
+			
+				// setup the attachment variable from the file constant
+				$attachment['name'] = $_FILES['Policy']['name']['attachment'];
+				$attachment['type'] = $_FILES['Policy']['type']['attachment'];
+				$attachment['tmp'] = $_FILES['Policy']['tmp_name']['attachment'];
+				$attachment['error'] = $_FILES['Policy']['error']['attachment'];
+				$attachment['size'] = $_FILES['Policy']['size']['attachment'];
+				
+				// get the current time so that there will be no overlap on the file names
+				$now = date('YmdGis');
+				
+				// Splits the file name to nitpick the extension
+				$temp = explode('.', $attachment['name']);
+				
+				//Get the final extension.
+				$extension = end($temp);
+				
+				// Concatinate the date and the extension.
+				$filename = "{$now}.{$extension}";
+				
+				// Set the file destination. It must be the webroot of the project. 
+				$destination = "uploads\\{$filename}";
+				
+				// insert the file name to be saved into the database.
+				$_POST['Policy']['attachment'] = $filename;
+				
+				// move the temporarily uploaded file in the server to the destination
+				// throw an error if the move failed
+				if(!move_uploaded_file($attachment['tmp'],$destination )){
+					error('Folder does not exist.');
+				}
+				}
+				
 			$model->attributes=$_POST['Policy'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
