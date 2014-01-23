@@ -22,7 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'policy_id',
+		'policy.policy_dateissued',
 		'lastname',
 		'firstname',
 		'description',

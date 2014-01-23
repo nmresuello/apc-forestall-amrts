@@ -26,6 +26,6 @@ $this->menu=array(
 		'date',
 		'receipt',
 		'paymentamount',
-		'commission_id',
+		'commission.amount',
 	),
 )); ?>

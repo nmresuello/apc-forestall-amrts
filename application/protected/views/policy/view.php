@@ -28,9 +28,9 @@ $this->menu=array(
 		'policy_coverage',
 		'insureditems',
 		'termprice',
-		'insurance_company_id',
-		'assured_id',
-		'insurance_type_id',
+		'insuranceCompany.company_name',
+		'assured.client_lastname',
+		'insuranceType.insurance_name',
 		'attachment',
 	),
 )); ?>
