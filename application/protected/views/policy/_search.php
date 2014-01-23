@@ -61,6 +61,11 @@
 		<?php echo $form->textField($model,'insurance_type_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'attachment'); ?>
+		<?php echo $form->textField($model,'attachment',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

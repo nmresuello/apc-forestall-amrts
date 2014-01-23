@@ -27,13 +27,13 @@
 		<?php echo $form->error($model,'company_address'); ?>
 	</div>
 
-	<div class="row">
-	<?php echo $form->labelEx($model,'broker_id'); ?>
-		<?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
+	  <div class="row">
+                <?php echo $form->labelEx($model,'broker_id'); ?>
+                <?php echo $form->dropDownList($model, 'broker_id', CHtml::listData(
             broker::model()->findAll(), 'id', 'broker_name'),
             array('prompt' => 'Select Broker'));?>
-		<?php echo $form->error($model,'broker_id'); ?>
-	</div>
+                <?php echo $form->error($model,'broker_name'); ?>
+        </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

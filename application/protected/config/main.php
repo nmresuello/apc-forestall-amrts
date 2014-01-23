@@ -9,7 +9,7 @@
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Forestall Insurance',
+	'name'=>'Forestall Insurance Agency Company',
 	
 	// preloading 'log' component
 	'preload'=>array('log'),

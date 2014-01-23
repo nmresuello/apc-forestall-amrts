@@ -56,6 +56,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'insurance_company_id',
 		'assured_id',
 		'insurance_type_id',
+		'attachment',
 		*/
 		array(
 			'class'=>'CButtonColumn',

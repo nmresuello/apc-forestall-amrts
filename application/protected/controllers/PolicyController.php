@@ -63,59 +63,17 @@ class PolicyController extends Controller
 	public function actionCreate()
 	{
 		$model=new Policy;
-	
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		
-		
+
 		if(isset($_POST['Policy']))
 		{
-			$attachment = array();
-		
-			if(!empty($_FILES)){
-			
-				// setup the attachment ariable from the file constant
-				$attachment['name'] = $_FILES['Policy']['name']['attachment'];
-				$attachment['type'] = $_FILES['Policy']['type']['attachment'];
-				$attachment['tmp'] = $_FILES['Policy']['tmp_name']['attachment'];
-				$attachment['error'] = $_FILES['Policy']['error']['attachment'];
-				$attachment['size'] = $_FILES['Policy']['size']['attachment'];
-				
-				// get the current time so that there will be no overlap on the file names
-				$now = date('YmdGis');
-				
-				// split the file name to nitpick the extension
-				$temp = explode('.', $attachment['name']);
-				
-				//assuming that all files to be uploaded are standard files, get the final extension
-				$extension = end($temp);
-				
-				// concatinate the date and the extension
-				$filename = "{$now}.{$extension}";
-				
-				// set the file destination
-				// It must be the webroot of the project. Change it to your liking
-				// If the server is linux though, please run:
-				//    `chmod og+w` to the uplaods folder. Without the ``
-				// in this case `chmod og+w C:\xampp\htdocs\Cambay\uploads`
-				$destination = "uploads\\{$filename}";
-				
-				// insert the file name to be saved into the database
-				$_POST['Policy']['attachment'] = $filename;
-				
-				// move the temporarily uploaded file in the server to the destination
-				// throw an error if the move failed
-				// usual cases : wrong permissions and or the folder does not exist
-				//  Not sure if the error throwing is right so, pakiayos na lang
-				if(!move_uploaded_file($attachment['tmp'],$destination )){
-					error('Something went wrong.');
-				}
-			}
-		
 			$model->attributes=$_POST['Policy'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
+
 		$this->render('create',array(
 			'model'=>$model,
 		));
