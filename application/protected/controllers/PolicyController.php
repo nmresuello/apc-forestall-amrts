@@ -93,7 +93,7 @@ class PolicyController extends Controller
 				$filename = "{$now}.{$extension}";
 				
 				// Set the file destination. It must be the webroot of the project. 
-				$destination = "uploads\\{$filename}";
+				$destination = "/home/projectuser/htdocs2013/apc-forestall-amrts/application/uploads/|$filename|";
 				
 				// insert the file name to be saved into the database.
 				$_POST['Policy']['attachment'] = $filename;
