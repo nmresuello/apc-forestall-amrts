@@ -90,7 +90,7 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
-	'theme'=>'mattskitchen', // requires you to copy the theme under your themes directory
+	'theme'=>'hebo', // requires you to copy the theme under your themes directory
 
 );
 http://127.0.0.1/ 127.0.0.1
